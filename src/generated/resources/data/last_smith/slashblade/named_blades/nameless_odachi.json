@@ -1,0 +1,11 @@
+{
+  "name": "last_smith:nameless_odachi",
+  "properties": {
+    "attack_base": 5.0,
+    "max_damage": 70
+  },
+  "render": {
+    "model": "last_smith:model/named/odachi/model.obj",
+    "texture": "last_smith:model/named/odachi/odachi.png"
+  }
+}

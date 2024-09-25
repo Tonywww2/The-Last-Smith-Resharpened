@@ -1,0 +1,15 @@
+{
+  "name": "last_smith:muramasa_kagura",
+  "properties": {
+    "attack_base": 5.0,
+    "max_damage": 70,
+    "slash_art": "slashblade:circle_slash",
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "last_smith:model/named/odachi/model.obj",
+    "texture": "last_smith:model/named/odachi/murasama_kagura.png"
+  }
+}

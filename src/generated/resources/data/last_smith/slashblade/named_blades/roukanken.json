@@ -1,0 +1,22 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 2
+    }
+  ],
+  "name": "last_smith:roukanken",
+  "properties": {
+    "attack_base": 10.0,
+    "max_damage": 70,
+    "slash_art": "last_smith:transmigration_slash",
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "last_smith:model/named/roukan/model.obj",
+    "summon_sword_color": 16758725,
+    "texture": "last_smith:model/named/roukan/texture.png"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 2
+    }
+  ],
+  "name": "last_smith:amagumo_kaze",
+  "properties": {
+    "attack_base": 5.0,
+    "max_damage": 70,
+    "slash_art": "slashblade:drive_vertical",
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "last_smith:model/named/smith/model.obj",
+    "texture": "last_smith:model/named/smith/texture_wind.png"
+  }
+}
