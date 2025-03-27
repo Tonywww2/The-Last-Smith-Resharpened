@@ -15,6 +15,7 @@
     ]
   },
   "render": {
+    "carry_type": "default",
     "model": "slashblade:model/named/agito.obj",
     "texture": "last_smith:model/named/smith/texture_cloud.png"
   }

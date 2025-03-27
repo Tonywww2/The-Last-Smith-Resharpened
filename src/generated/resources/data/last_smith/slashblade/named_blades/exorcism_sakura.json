@@ -15,6 +15,7 @@
     ]
   },
   "render": {
+    "carry_type": "default",
     "model": "last_smith:model/named/sakura/model.obj",
     "summon_sword_color": 16758725,
     "texture": "last_smith:model/named/sakura/texture.png"

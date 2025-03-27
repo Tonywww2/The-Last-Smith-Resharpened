@@ -15,6 +15,7 @@
     ]
   },
   "render": {
+    "carry_type": "default",
     "model": "last_smith:model/named/hakurou/model.obj",
     "summon_sword_color": 15921906,
     "texture": "last_smith:model/named/hakurou/texture.png"

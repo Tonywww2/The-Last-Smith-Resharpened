@@ -15,6 +15,7 @@
     ]
   },
   "render": {
+    "carry_type": "default",
     "model": "last_smith:model/named/bot_roukan/model.obj",
     "summon_sword_color": 16758725,
     "texture": "last_smith:model/named/bot_roukan/texture.png"

@@ -9,6 +9,7 @@
     ]
   },
   "render": {
+    "carry_type": "default",
     "model": "last_smith:model/named/odachi/model.obj",
     "texture": "last_smith:model/named/odachi/murasama_kagura.png"
   }

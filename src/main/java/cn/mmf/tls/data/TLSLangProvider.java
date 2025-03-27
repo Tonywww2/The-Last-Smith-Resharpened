@@ -37,8 +37,6 @@ public class TLSLangProvider extends AbstractLangProvider {
 		addSlashBlade(BuiltInSlashBladeRegistry.EVIL_KATAWARE, "Evil-Kataware-");
 		addSlashBlade(BuiltInSlashBladeRegistry.EVIL_SHURA, "Evil-Shura-");
 		
-		addSlashBlade(BuiltInSlashBladeRegistry.UMA_HISHI, "Miracle-Rhombus-");
-		
 		add("slash_art.last_smith.transmigration_slash", "Transmigration Slash");
 	}
     private void addSlashBlade(ResourceKey<SlashBladeDefinition> data, String name) {

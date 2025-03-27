@@ -21,6 +21,7 @@
     ]
   },
   "render": {
+    "carry_type": "default",
     "model": "last_smith:model/named/yamato_neo/yamato_neo.obj",
     "texture": "last_smith:model/named/yamato_neo/yamato_neo.png"
   }

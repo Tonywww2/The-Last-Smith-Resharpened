@@ -7,6 +7,7 @@ import org.apache.commons.compress.utils.Lists;
 import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.slasharts.TLSSlashArtsRegistry;
 import mods.flammpfeil.slashblade.SlashBlade;
+import mods.flammpfeil.slashblade.client.renderer.CarryType;
 import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.registry.SlashArtsRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.EnchantmentDefinition;
@@ -45,19 +46,42 @@ public class BuiltInSlashBladeRegistry {
     public static final ResourceKey<SlashBladeDefinition> SAKURAGIRI = register("sakuragiri");
     
     public static final ResourceKey<SlashBladeDefinition> YAMATO = register("yamato_neo");
-    public static final ResourceKey<SlashBladeDefinition> UMA_HISHI = register("uma_hishi");
+    
+    public static final ResourceKey<SlashBladeDefinition> KUSABIMARU = register("kusabimaru");
+    public static final ResourceKey<SlashBladeDefinition> FUSHIGIRI = register("fushigiri");
     
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
-    	bootstrap.register(UMA_HISHI,
-                new SlashBladeDefinition(TheLastSmith.prefix("uma_hishi"),
+    	
+      	bootstrap.register(KUSABIMARU,
+                new SlashBladeDefinition(TheLastSmith.prefix("kusabimaru"),
                         RenderDefinition.Builder
                                 .newInstance()
-                                .textureName(TheLastSmith.prefix("model/named/uma/hishi.png"))
-                                .modelName(TheLastSmith.prefix("model/named/uma/hishi.obj")).build(),
+                                .textureName(TheLastSmith.prefix("model/named/sekiro/kusabimaru.png"))
+                                .modelName(TheLastSmith.prefix("model/named/sekiro/kusabimaru.obj"))
+                                .standbyRenderType(CarryType.KATANA)
+                                .build(),
                         PropertiesDefinition.Builder.newInstance()
                         .baseAttackModifier(5.0F).maxDamage(70)
                         .build(),
                         Lists.newArrayList()));
+    	
+        bootstrap.register(FUSHIGIRI,
+                new SlashBladeDefinition(TheLastSmith.prefix("fushigiri"),
+                        RenderDefinition.Builder.newInstance()
+                        	.textureName(TheLastSmith.prefix("model/named/sekiro/fushigiri.png"))
+                            .modelName(TheLastSmith.prefix("model/named/sekiro/fushigiri.obj"))
+                            .effectColor(0XDD3E0000)
+                            .standbyRenderType(CarryType.NINJA)
+                            .build(),
+                        PropertiesDefinition.Builder.newInstance().baseAttackModifier(9.0F)
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 2), 
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 4))));
+
         bootstrap.register(YAMATO,
                 new SlashBladeDefinition(TheLastSmith.prefix("yamato_neo"),
                         RenderDefinition.Builder.newInstance().textureName(TheLastSmith.prefix("model/named/yamato_neo/yamato_neo.png"))

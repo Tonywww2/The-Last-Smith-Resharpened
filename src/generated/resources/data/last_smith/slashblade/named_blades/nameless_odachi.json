@@ -5,6 +5,7 @@
     "max_damage": 70
   },
   "render": {
+    "carry_type": "default",
     "model": "last_smith:model/named/odachi/model.obj",
     "texture": "last_smith:model/named/odachi/odachi.png"
   }
