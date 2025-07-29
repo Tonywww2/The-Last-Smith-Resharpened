@@ -2,7 +2,7 @@ package cn.mmf.tls.data;
 
 import cn.mcmod_mmf.mmlib.data.AbstractLangProvider;
 import cn.mmf.tls.TheLastSmith;
-import cn.mmf.tls.data.builtin.BuiltInSlashBladeRegistry;
+import cn.mmf.tls.data.builtin.TLSSlashBladeRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
 import net.minecraft.Util;
 import net.minecraft.data.PackOutput;
@@ -17,25 +17,25 @@ public class TLSLangProvider extends AbstractLangProvider {
 
 	@Override
 	protected void addTranslations() {
-		addSlashBlade(BuiltInSlashBladeRegistry.AMAGUMO_KAZE, "Amagumo-Kaze-");
-		addSlashBlade(BuiltInSlashBladeRegistry.AMAGUMO_KUMO, "Amagumo-Kumo-");
-		addSlashBlade(BuiltInSlashBladeRegistry.AMAGUMO_MUNIN, "Amagumo-Munin-");
-		addSlashBlade(BuiltInSlashBladeRegistry.BUNSHI, "-BunShi-");
-		addSlashBlade(BuiltInSlashBladeRegistry.SAKURAGIRI, "-Sakura Giri-");
-		addSlashBlade(BuiltInSlashBladeRegistry.YAMATO, "-Yamato-");
-		addSlashBlade(BuiltInSlashBladeRegistry.ROUKANKEN, "-Roukanken-");
-		addSlashBlade(BuiltInSlashBladeRegistry.ROUKANKEN_NETHER, "Gokukaiken-Roukanken-");
-		addSlashBlade(BuiltInSlashBladeRegistry.HAKUROUKEN, "-Hakuroken-");
-		addSlashBlade(BuiltInSlashBladeRegistry.HAKUROUKEN_NETHER, "Gokukaiken-Hakuroken-");
+		addSlashBlade(TLSSlashBladeRegistry.AMAGUMO_KAZE, "Amagumo-Kaze-");
+		addSlashBlade(TLSSlashBladeRegistry.AMAGUMO_KUMO, "Amagumo-Kumo-");
+		addSlashBlade(TLSSlashBladeRegistry.AMAGUMO_MUNIN, "Amagumo-Munin-");
+		addSlashBlade(TLSSlashBladeRegistry.BUNSHI, "-BunShi-");
+		addSlashBlade(TLSSlashBladeRegistry.SAKURAGIRI, "-Sakura Giri-");
+		addSlashBlade(TLSSlashBladeRegistry.YAMATO, "-Yamato-");
+		addSlashBlade(TLSSlashBladeRegistry.ROUKANKEN, "-Roukanken-");
+		addSlashBlade(TLSSlashBladeRegistry.ROUKANKEN_NETHER, "Gokukaiken-Roukanken-");
+		addSlashBlade(TLSSlashBladeRegistry.HAKUROUKEN, "-Hakuroken-");
+		addSlashBlade(TLSSlashBladeRegistry.HAKUROUKEN_NETHER, "Gokukaiken-Hakuroken-");
 		
-		addSlashBlade(BuiltInSlashBladeRegistry.NAMELESS_ODACHI, "Anonymity -Nameless-");
-		addSlashBlade(BuiltInSlashBladeRegistry.MURAMASA_KAGURA, "-Kagura- Muramasa");
+		addSlashBlade(TLSSlashBladeRegistry.NAMELESS_ODACHI, "Anonymity -Nameless-");
+		addSlashBlade(TLSSlashBladeRegistry.MURAMASA_KAGURA, "-Kagura- Muramasa");
 		
-		addSlashBlade(BuiltInSlashBladeRegistry.EXORCISM_SAKURA, "Exorcism-Sakura-");
-		addSlashBlade(BuiltInSlashBladeRegistry.EXORCISM_GINKGO, "Exorcism-Ginkgo-");
-		addSlashBlade(BuiltInSlashBladeRegistry.EXORCISM_YUKI, "Exorcism-Yukikage-");
-		addSlashBlade(BuiltInSlashBladeRegistry.EVIL_KATAWARE, "Evil-Kataware-");
-		addSlashBlade(BuiltInSlashBladeRegistry.EVIL_SHURA, "Evil-Shura-");
+		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_SAKURA, "Exorcism-Sakura-");
+		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_GINKGO, "Exorcism-Ginkgo-");
+		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_YUKI, "Exorcism-Yukikage-");
+		addSlashBlade(TLSSlashBladeRegistry.EVIL_KATAWARE, "Evil-Kataware-");
+		addSlashBlade(TLSSlashBladeRegistry.EVIL_SHURA, "Evil-Shura-");
 		
 		add("slash_art.last_smith.transmigration_slash", "Transmigration Slash");
 	}

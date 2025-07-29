@@ -24,8 +24,6 @@ import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class SlashBladeSmithingRecipe implements SmithingRecipe {
-	// TODO: 关联分类-刀-材料的合成
-	
 	public static final RecipeSerializer<SlashBladeSmithingRecipe> SERIALIZER = new SlashBladeSmithingRecipe.Serializer();
 	private final ResourceLocation outputBlade;
 	private final ResourceLocation id;
@@ -42,7 +40,7 @@ public class SlashBladeSmithingRecipe implements SmithingRecipe {
 		this.base = base;
 		this.addition = addition;
 	}
-	
+
 	public SlashBladeSmithingRecipe(ResourceLocation outputBlade, Ingredient template, Ingredient base, Ingredient addition) {
 		this(outputBlade, outputBlade, template, base, addition);
 	}
@@ -72,9 +70,9 @@ public class SlashBladeSmithingRecipe implements SmithingRecipe {
 
         if (!ForgeRegistries.ITEMS.getKey(result.getItem()).equals(getOutputBlade())) {
             result = access.registryOrThrow(SlashBladeDefinition.REGISTRY_KEY).get(getOutputBlade())
-                    .getBlade(result.getItem());
+                    .getBlade();
         }
-
+        
         return result;
     }
 	
@@ -99,6 +97,7 @@ public class SlashBladeSmithingRecipe implements SmithingRecipe {
         resultState.setProudSoulCount(resultState.getProudSoulCount() + ingredientState.getProudSoulCount());
         resultState.setKillCount(resultState.getKillCount() + ingredientState.getKillCount());
         resultState.setRefine(resultState.getRefine() + ingredientState.getRefine());
+        result.getOrCreateTag().put("bladeState", resultState.serializeNBT());
         updateEnchantment(result, stack);
         
         return result;

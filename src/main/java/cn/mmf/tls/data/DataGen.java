@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 import cn.mmf.tls.TheLastSmith;
-import cn.mmf.tls.data.builtin.BuiltInSlashBladeRegistry;
+import cn.mmf.tls.data.builtin.TLSSlashBladeRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.HolderLookup.Provider;
@@ -25,9 +25,13 @@ public class DataGen {
 		PackOutput packOutput = dataGenerator.getPackOutput();
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         final RegistrySetBuilder bladeBuilder = new RegistrySetBuilder().add(SlashBladeDefinition.REGISTRY_KEY,
-                BuiltInSlashBladeRegistry::registerAll);
+                TLSSlashBladeRegistry::registerAll);
         
         dataGenerator.addProvider(event.includeClient(), new TLSLangProvider(packOutput));
+        
+        dataGenerator.addProvider(event.includeClient(), new TLSBlockStateProvider(packOutput, existingFileHelper));
+        
+        dataGenerator.addProvider(event.includeClient(), new TLSItemModelProvider(packOutput, existingFileHelper));
         
         dataGenerator.addProvider(event.includeServer(),
                 new DatapackBuiltinEntriesProvider(packOutput, lookupProvider, bladeBuilder, Set.of(TheLastSmith.MODID)) {
@@ -39,6 +43,7 @@ public class DataGen {
 
         });
         
+        dataGenerator.addProvider(event.includeServer(), new TLSRecipeProvider(packOutput));
         
 	}
 }

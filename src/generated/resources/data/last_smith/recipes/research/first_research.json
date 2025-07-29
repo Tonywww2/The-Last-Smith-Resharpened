@@ -1,0 +1,15 @@
+{
+  "type": "last_smith:research",
+  "blade": {
+    "item": "minecraft:wooden_sword"
+  },
+  "ink": {
+    "tag": "forge:dyes/black"
+  },
+  "output": {
+    "item": "last_smith:scroll"
+  },
+  "paper": {
+    "item": "minecraft:paper"
+  }
+}

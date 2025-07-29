@@ -1,8 +1,12 @@
-package cn.mmf.tls;
+ package cn.mmf.tls;
 
 import com.mojang.logging.LogUtils;
 
+import cn.mmf.tls.block.BlockRegistry;
 import cn.mmf.tls.combo.ComboStateRegistry;
+import cn.mmf.tls.item.ItemRegistry;
+import cn.mmf.tls.menus.ContainerRegistry;
+import cn.mmf.tls.recipe.RecipeSerializerRegistry;
 import cn.mmf.tls.slasharts.TLSSlashArtsRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,8 +26,16 @@ public class TheLastSmith {
 	public TheLastSmith() {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		
+		ItemRegistry.ITEMS.register(modEventBus);
+		BlockRegistry.BLOCKS.register(modEventBus);
+		TLSCreativeGroup.CREATIVE_MODE_TABS.register(modEventBus);
+		RecipeSerializerRegistry.RECIPE_TYPES.register(modEventBus);
+		RecipeSerializerRegistry.RECIPE_SERIALIZER.register(modEventBus);
+		ContainerRegistry.CONTAINER_TYPES.register(modEventBus);
+		
 		ComboStateRegistry.COMBO_STATE.register(modEventBus);
 		TLSSlashArtsRegistry.SLASH_ARTS.register(modEventBus);
+
 	}
 
 	public static Logger getLogger() {

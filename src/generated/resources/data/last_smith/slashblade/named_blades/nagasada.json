@@ -1,0 +1,14 @@
+{
+  "name": "last_smith:nagasada",
+  "properties": {
+    "max_damage": 70,
+    "sword_type": [
+      "sealed"
+    ]
+  },
+  "render": {
+    "carry_type": "default",
+    "model": "last_smith:model/nagasada/model.obj",
+    "texture": "last_smith:model/nagasada/texture.png"
+  }
+}
