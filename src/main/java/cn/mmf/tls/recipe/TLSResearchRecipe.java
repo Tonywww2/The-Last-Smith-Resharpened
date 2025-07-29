@@ -5,6 +5,7 @@ import java.util.stream.Stream;
 import com.google.gson.JsonObject;
 
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -21,14 +22,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class TLSResearchRecipe implements Recipe<Container> {
 	private final ResourceLocation id;
-	
+
 	public Ingredient blade;
 	public Ingredient paper;
 	public Ingredient ink;
 
 	public ItemStack output;
-	
-	public TLSResearchRecipe(ResourceLocation id, ItemStack output, Ingredient blade, Ingredient paper, Ingredient ink) {
+
+	public TLSResearchRecipe(ResourceLocation id, ItemStack output, Ingredient blade, Ingredient paper,
+			Ingredient ink) {
 		super();
 		this.id = id;
 		this.output = output;
@@ -40,7 +42,6 @@ public class TLSResearchRecipe implements Recipe<Container> {
 	public TLSResearchRecipe(ItemStack output, Ingredient blade, Ingredient paper, Ingredient ink) {
 		this(ForgeRegistries.ITEMS.getKey(output.getItem()), output, blade, paper, ink);
 	}
-
 
 	@Override
 	public boolean matches(Container wrapper, Level level) {
@@ -55,7 +56,13 @@ public class TLSResearchRecipe implements Recipe<Container> {
 
 	@Override
 	public ItemStack assemble(Container wrapper, RegistryAccess access) {
-		return this.output;
+		ItemStack itemstack = this.output.copy();
+		CompoundTag compoundtag = wrapper.getItem(1).getTag();
+		if (compoundtag != null) {
+			itemstack.setTag(compoundtag.copy());
+		}
+
+		return itemstack;
 	}
 
 	@Override
@@ -94,29 +101,29 @@ public class TLSResearchRecipe implements Recipe<Container> {
 	public ResourceLocation getId() {
 		return this.id;
 	}
-	
+
 	public static class Serializer implements RecipeSerializer<TLSResearchRecipe> {
-        public TLSResearchRecipe fromJson(ResourceLocation id, JsonObject json) {
-           Ingredient blade = Ingredient.fromJson(GsonHelper.getNonNull(json, "blade"));
-           Ingredient paper = Ingredient.fromJson(GsonHelper.getNonNull(json, "paper"));
-           Ingredient ink = Ingredient.fromJson(GsonHelper.getNonNull(json, "ink"));
-           ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
-           return new TLSResearchRecipe(id, output, blade, paper, ink);
-        }
+		public TLSResearchRecipe fromJson(ResourceLocation id, JsonObject json) {
+			Ingredient blade = Ingredient.fromJson(GsonHelper.getNonNull(json, "blade"));
+			Ingredient paper = Ingredient.fromJson(GsonHelper.getNonNull(json, "paper"));
+			Ingredient ink = Ingredient.fromJson(GsonHelper.getNonNull(json, "ink"));
+			ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
+			return new TLSResearchRecipe(id, output, blade, paper, ink);
+		}
 
-        public TLSResearchRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buffer) {
-           Ingredient blade = Ingredient.fromNetwork(buffer);
-           Ingredient paper = Ingredient.fromNetwork(buffer);
-           Ingredient ink = Ingredient.fromNetwork(buffer);
-           ItemStack output = buffer.readItem();
-           return new TLSResearchRecipe(id, output, blade, paper, ink);
-        }
+		public TLSResearchRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buffer) {
+			Ingredient blade = Ingredient.fromNetwork(buffer);
+			Ingredient paper = Ingredient.fromNetwork(buffer);
+			Ingredient ink = Ingredient.fromNetwork(buffer);
+			ItemStack output = buffer.readItem();
+			return new TLSResearchRecipe(id, output, blade, paper, ink);
+		}
 
-        public void toNetwork(FriendlyByteBuf buffer, TLSResearchRecipe recipe) {
-           recipe.blade.toNetwork(buffer);
-           recipe.paper.toNetwork(buffer);
-           recipe.ink.toNetwork(buffer);
-           buffer.writeItem(recipe.output);
-        }
-     }
+		public void toNetwork(FriendlyByteBuf buffer, TLSResearchRecipe recipe) {
+			recipe.blade.toNetwork(buffer);
+			recipe.paper.toNetwork(buffer);
+			recipe.ink.toNetwork(buffer);
+			buffer.writeItem(recipe.output);
+		}
+	}
 }
