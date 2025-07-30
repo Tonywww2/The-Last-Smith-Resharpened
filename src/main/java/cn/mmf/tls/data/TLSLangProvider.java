@@ -2,6 +2,7 @@ package cn.mmf.tls.data;
 
 import cn.mcmod_mmf.mmlib.data.AbstractLangProvider;
 import cn.mmf.tls.TheLastSmith;
+import cn.mmf.tls.block.BlockRegistry;
 import cn.mmf.tls.data.builtin.TLSSlashBladeRegistry;
 import cn.mmf.tls.item.ItemRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
@@ -18,6 +19,10 @@ public class TLSLangProvider extends AbstractLangProvider {
 
 	@Override
 	protected void addTranslations() {
+		add("itemGroup.the_last_smith", "The Last Smith");
+		add("last_smith.jei.research", "Researching");
+		addBlock(BlockRegistry.RESEARCH_TABLE, "Researching Table");
+		
 		addSlashBlade(TLSSlashBladeRegistry.AMAGUMO_KAZE, "Amagumo -Kaze-");
 		addSlashBlade(TLSSlashBladeRegistry.AMAGUMO_KUMO, "Amagumo -Kumo-");
 		addSlashBlade(TLSSlashBladeRegistry.AMAGUMO_MUNIN, "Amagumo -Munin-");
@@ -32,11 +37,17 @@ public class TLSLangProvider extends AbstractLangProvider {
 		addSlashBlade(TLSSlashBladeRegistry.NAMELESS_ODACHI, "Odachi --");
 		addSlashBlade(TLSSlashBladeRegistry.MURAMASA_KAGURA, "-Kagura- Muramasa");
 		
-		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_SAKURA, "Exorcism-Sakura-");
-		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_GINKGO, "Exorcism-Ginkgo-");
-		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_YUKI, "Exorcism-Yukikage-");
-		addSlashBlade(TLSSlashBladeRegistry.EVIL_KATAWARE, "Evil-Kataware-");
-		addSlashBlade(TLSSlashBladeRegistry.EVIL_SHURA, "Evil-Shura-");
+		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_SAKURA, "Exorcism -Sakura-");
+		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_GINKGO, "Exorcism -Ginkgo-");
+		addSlashBlade(TLSSlashBladeRegistry.EXORCISM_YUKI, "Exorcism -Yukikage-");
+		addSlashBlade(TLSSlashBladeRegistry.EVIL_KATAWARE, "Evil -Kataware-");
+		addSlashBlade(TLSSlashBladeRegistry.EVIL_SHURA, "Evil -Shura-");
+		
+		addSlashBlade(TLSSlashBladeRegistry.BAMBOO_TOP, "Top -Bamboo Light-");
+		addSlashBlade(TLSSlashBladeRegistry.BAMBOO_HERMIT, "The Hermit's Bamboo Light");
+		addSlashBlade(TLSSlashBladeRegistry.GOLDENBAMBOO, "Noted -Golden Bamboo Light-");
+		addSlashBlade(TLSSlashBladeRegistry.SILVERBAMBOO_TOP, "Top -Silver Bamboo Light-");
+		addSlashBlade(TLSSlashBladeRegistry.SILVERBAMBOO_BLOOD, "-Bloody Bamboo Light-");
 		
 		add("slash_art.last_smith.transmigration_slash", "Transmigration Slash");
 		

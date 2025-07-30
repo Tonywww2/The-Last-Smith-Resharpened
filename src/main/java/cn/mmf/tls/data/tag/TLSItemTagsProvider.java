@@ -5,6 +5,8 @@ import java.util.concurrent.CompletableFuture;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.tracen.umapyoi.Umapyoi;
@@ -18,7 +20,8 @@ public class TLSItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider lookup) {
-    	tag(TLSItemTags.BAMBOO);
+    	tag(TLSItemTags.BAMBOO).add(Items.BAMBOO);
+    	tag(TLSItemTags.LEAVES_CHERRY).add(Items.CHERRY_LEAVES).addOptional(new ResourceLocation("sakura", "sakuraleaves"));
     }
 
 }

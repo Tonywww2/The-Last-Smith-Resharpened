@@ -5,6 +5,8 @@ import java.util.concurrent.CompletableFuture;
 
 import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.data.builtin.TLSSlashBladeRegistry;
+import cn.mmf.tls.data.tag.TLSBlockTagsProvider;
+import cn.mmf.tls.data.tag.TLSItemTagsProvider;
 import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.HolderLookup.Provider;
@@ -42,6 +44,10 @@ public class DataGen {
                     }
 
         });
+        var blockTagsProvider = new TLSBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
+        dataGenerator.addProvider(event.includeServer(), blockTagsProvider);
+        dataGenerator.addProvider(event.includeServer(), new TLSItemTagsProvider(packOutput, lookupProvider, 
+        		blockTagsProvider.contentsGetter(), existingFileHelper));
         
         dataGenerator.addProvider(event.includeServer(), new TLSRecipeProvider(packOutput));
         

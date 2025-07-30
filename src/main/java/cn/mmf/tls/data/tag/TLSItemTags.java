@@ -6,5 +6,5 @@ import net.minecraft.world.item.Item;
 
 public class TLSItemTags {
     public static final TagKey<Item> BAMBOO = TagUtils.forgeItemTag("bamboo");
-    
+    public static final TagKey<Item> LEAVES_CHERRY = TagUtils.forgeItemTag("leaves/cherry");
 }
