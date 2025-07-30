@@ -63,7 +63,7 @@ public class ResearchMenu extends ItemCombinerMenu {
 	protected void onTake(Player pPlayer, ItemStack pStack) {
 		pStack.onCraftedBy(pPlayer.level(), pPlayer, pStack.getCount());
 		this.resultSlots.awardUsedRecipes(pPlayer, this.getRelevantItems());
-		this.shrinkStackInSlot(0);
+		// this.shrinkStackInSlot(0);
 		this.shrinkStackInSlot(1);
 		this.shrinkStackInSlot(2);
         this.access.execute((level, pos) -> {

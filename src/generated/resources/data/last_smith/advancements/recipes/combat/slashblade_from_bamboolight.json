@@ -1,34 +1,34 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "last_smith:research/first_research"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wooden_sword": {
+    "has_slashblade_white": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:wooden_sword"
+              "slashblade:slashblade_white"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "last_smith:slashblade_from_bamboolight"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_wooden_sword",
+      "has_slashblade_white",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "last_smith:research/first_research"
+      "last_smith:slashblade_from_bamboolight"
     ]
   },
   "sends_telemetry_event": false

@@ -8,6 +8,6 @@
   },
   "blade": "slashblade:slashblade_bamboo",
   "template": {
-    "item": "last_smith:scroll"
+    "item": "last_smith:scroll_basic"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "last_smith:slashblade_smithing",
+  "addition": {
+    "item": "last_smith:blade"
+  },
+  "base": {
+    "item": "slashblade:slashblade_wood"
+  },
+  "blade": "slashblade:slashblade_white",
+  "template": {
+    "item": "last_smith:scroll_basic"
+  }
+}
