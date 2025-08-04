@@ -4,9 +4,11 @@ import com.mojang.logging.LogUtils;
 
 import cn.mmf.tls.block.BlockRegistry;
 import cn.mmf.tls.combo.ComboStateRegistry;
+import cn.mmf.tls.enchantments.EnchantmentsRegistry;
 import cn.mmf.tls.item.ItemRegistry;
 import cn.mmf.tls.menus.ContainerRegistry;
 import cn.mmf.tls.recipe.RecipeSerializerRegistry;
+import cn.mmf.tls.se.TLSSpecialEffectRegistry;
 import cn.mmf.tls.slasharts.TLSSlashArtsRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -32,10 +34,10 @@ public class TheLastSmith {
 		RecipeSerializerRegistry.RECIPE_TYPES.register(modEventBus);
 		RecipeSerializerRegistry.RECIPE_SERIALIZER.register(modEventBus);
 		ContainerRegistry.CONTAINER_TYPES.register(modEventBus);
-		
+		EnchantmentsRegistry.ENCHANTMENTS.register(modEventBus);
 		ComboStateRegistry.COMBO_STATE.register(modEventBus);
 		TLSSlashArtsRegistry.SLASH_ARTS.register(modEventBus);
-
+		TLSSpecialEffectRegistry.SPECIAL_EFFECT.register(modEventBus);
 	}
 
 	public static Logger getLogger() {

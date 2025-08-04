@@ -46,10 +46,12 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SCROLL_EXORCISM = register("scroll_exorcism", ItemRegistry::uncommonScroll);
     public static final RegistryObject<Item> SCROLL_WOOD_KIWAMI = register("scroll_wood_kiwami", ItemRegistry::rareScroll);
     public static final RegistryObject<Item> SCROLL_MURAMASA = register("scroll_muramasa", ItemRegistry::rareScroll);
+    public static final RegistryObject<Item> SCROLL_SHURA = register("scroll_shura", ItemRegistry::rareScroll);
     public static final RegistryObject<Item> SCROLL_STAR = register("scroll_star", ItemRegistry::rareScroll);
     public static final RegistryObject<Item> SCROLL_SAKURA_FULL = register("scroll_sakura_full", ItemRegistry::rareScroll);
     public static final RegistryObject<Item> SCROLL_GOD = register("scroll_god", ItemRegistry::rareScroll);
     public static final RegistryObject<Item> SCROLL_BLOOD = register("scroll_blood", ItemRegistry::rareScroll);
+    public static final RegistryObject<Item> SCROLL_YAMATO= register("scroll_yamato", ItemRegistry::epicScroll);
     public static final RegistryObject<Item> SCROLL_MORTAL = register("scroll_mortal", ItemRegistry::epicScroll);
     public static final RegistryObject<Item> SCROLL_HEIL = register("scroll_heil", ItemRegistry::epicScroll);
     public static final RegistryObject<Item> SCROLL_BEWITCHED = register("scroll_bewitched", ItemRegistry::epicScroll);

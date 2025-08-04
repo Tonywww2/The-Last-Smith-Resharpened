@@ -6,6 +6,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 import cn.mmf.tls.block.BlockRegistry;
+import cn.mmf.tls.data.tag.TLSItemTags;
 import cn.mmf.tls.recipe.RecipeSerializerRegistry;
 import cn.mmf.tls.recipe.TLSResearchRecipe;
 import net.minecraft.sounds.SoundEvents;
@@ -63,7 +64,8 @@ public class ResearchMenu extends ItemCombinerMenu {
 	protected void onTake(Player pPlayer, ItemStack pStack) {
 		pStack.onCraftedBy(pPlayer.level(), pPlayer, pStack.getCount());
 		this.resultSlots.awardUsedRecipes(pPlayer, this.getRelevantItems());
-		// this.shrinkStackInSlot(0);
+		if(this.inputSlots.getItem(0).is(TLSItemTags.RESEARCH_CONSUMABLE))
+			this.shrinkStackInSlot(0);
 		this.shrinkStackInSlot(1);
 		this.shrinkStackInSlot(2);
         this.access.execute((level, pos) -> {

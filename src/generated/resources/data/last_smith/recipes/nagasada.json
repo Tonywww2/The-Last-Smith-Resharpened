@@ -1,13 +1,13 @@
 {
-  "type": "last_smith:slashblade_smithing",
+  "type": "slashblade:slashblade_smithing",
   "addition": {
-    "tag": "forge:dyes/cyan"
+    "item": "last_smith:blade_sakura"
   },
   "base": {
-    "item": "slashblade:slashblade_white"
+    "item": "slashblade:slashblade_silverbamboo"
   },
   "blade": "last_smith:nagasada",
   "template": {
-    "item": "last_smith:scroll_katana"
+    "item": "last_smith:scroll_sakura"
   }
 }

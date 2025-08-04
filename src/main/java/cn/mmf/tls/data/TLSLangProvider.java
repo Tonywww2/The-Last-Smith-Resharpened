@@ -4,7 +4,9 @@ import cn.mcmod_mmf.mmlib.data.AbstractLangProvider;
 import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.block.BlockRegistry;
 import cn.mmf.tls.data.builtin.TLSSlashBladeRegistry;
+import cn.mmf.tls.enchantments.EnchantmentsRegistry;
 import cn.mmf.tls.item.ItemRegistry;
+import cn.mmf.tls.se.TLSSpecialEffectRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
 import net.minecraft.Util;
 import net.minecraft.data.PackOutput;
@@ -21,6 +23,16 @@ public class TLSLangProvider extends AbstractLangProvider {
 	protected void addTranslations() {
 		add("itemGroup.the_last_smith", "The Last Smith");
 		add("last_smith.jei.research", "Researching");
+		add("container.last_smith.research", "Researching");
+		
+		add("last_smith.jei.cauldron", "Cauldron Quenching");
+		add("last_smith.jei.cauldron_need_water", "Need some water in the cauldron.");
+		
+		add("container.last_smith.research.error_tooltip", "Can't do any research this way");
+		add("container.last_smith.research.missing_blade_tooltip", "Add the blade or research");
+		add("container.last_smith.research.missing_paper_tooltip", "Add papers or research");
+		add("container.last_smith.research.missing_ink_tooltip", "Add ink");
+		
 		addBlock(BlockRegistry.RESEARCH_TABLE, "Researching Table");
 		
 		addSlashBlade(TLSSlashBladeRegistry.AMAGUMO_KAZE, "Amagumo -Kaze-");
@@ -43,6 +55,13 @@ public class TLSLangProvider extends AbstractLangProvider {
 		addSlashBlade(TLSSlashBladeRegistry.EVIL_KATAWARE, "Evil -Kataware-");
 		addSlashBlade(TLSSlashBladeRegistry.EVIL_SHURA, "Evil -Shura-");
 		
+		addSlashBlade(TLSSlashBladeRegistry.NAGASADA, "Spirit -Nagasada-");
+		
+		addSlashBlade(TLSSlashBladeRegistry.KUSABIMARU, "Named -Kusabimaru-");
+		addSlashBlade(TLSSlashBladeRegistry.FUSHIGIRI, "Fushigiri -Hairui-");
+		
+		addSlashBlade(TLSSlashBladeRegistry.SAGEQUOIA, "Named -Sagequoia-");
+		
 		addSlashBlade(TLSSlashBladeRegistry.BAMBOO_TOP, "Top -Bamboo Light-");
 		addSlashBlade(TLSSlashBladeRegistry.BAMBOO_HERMIT, "The Hermit's Bamboo Light");
 		addSlashBlade(TLSSlashBladeRegistry.GOLDENBAMBOO, "Noted -Golden Bamboo Light-");
@@ -50,6 +69,20 @@ public class TLSLangProvider extends AbstractLangProvider {
 		addSlashBlade(TLSSlashBladeRegistry.SILVERBAMBOO_BLOOD, "-Bloody Bamboo Light-");
 		
 		add("slash_art.last_smith.transmigration_slash", "Transmigration Slash");
+		add("slash_art.last_smith.fushigiri", "Mortal Draw");
+		add("slash_art.last_smith.iai_cross", "Ashina Cross");
+		add("slash_art.last_smith.sakura_blistering_swords", "Sakura -Blistering-");
+		
+		addEnchantment(EnchantmentsRegistry.SPIRIT_SLASH, "Spirit Slash");
+		
+		addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId(), "Spirit Power");
+		addSpecialEffect(TLSSpecialEffectRegistry.BEWITCHED_POWER.getId(), "Bewitched Power");
+		addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SHARPNESS.getId(), "Spirit Sharpness");
+		addSpecialEffect(TLSSpecialEffectRegistry.EXTREME_SHARPNESS.getId(), "Extreme Sharpness");
+		
+		addSpecialEffect(TLSSpecialEffectRegistry.SMITE_SE.getId(), "Exorcism");
+		addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SMITE.getId(), "Nirvana");
+		addSpecialEffect(TLSSpecialEffectRegistry.FUSHIGIRI_SE.getId(), "Fushigiri");
 		
 		addItem(ItemRegistry.SAKURA, "Spirit Sakura Leaf");
         addItem(ItemRegistry.SAKURA_FULL, "Spirit Sakura");
@@ -79,10 +112,12 @@ public class TLSLangProvider extends AbstractLangProvider {
         addItem(ItemRegistry.SCROLL_EXORCISM, "Story of The Exorcism Blades");
         addItem(ItemRegistry.SCROLL_KATANA, "Note of Katana");
         addItem(ItemRegistry.SCROLL_ODACHI, "Notes of Odachi");
+        addItem(ItemRegistry.SCROLL_SHURA, "Story of The Shura");
         addItem(ItemRegistry.SCROLL_MURAMASA, "Story of The Muramasa");
         addItem(ItemRegistry.SCROLL_STAR, "Story of The Meteorn");
         addItem(ItemRegistry.SCROLL_GOD, "Story of The God's Blade");
         addItem(ItemRegistry.SCROLL_BLOOD, "Story of The Blood Blade");
+        addItem(ItemRegistry.SCROLL_YAMATO, "Story of The Yamato");
         addItem(ItemRegistry.SCROLL_MORTAL, "Story of The Mortal Blade");
         addItem(ItemRegistry.SCROLL_BEWITCHED, "Story of The Bewitched Power");
         addItem(ItemRegistry.SCROLL_HEIL, "Story of The Inferno Blade");
@@ -96,6 +131,10 @@ public class TLSLangProvider extends AbstractLangProvider {
 
     private void addSlashBlade(ResourceLocation key, String name) {
         add(Util.makeDescriptionId("item", key), name);
+    }
+    
+    private void addSpecialEffect(ResourceLocation key, String name) {
+        add(Util.makeDescriptionId("se", key), name);
     }
 
 }

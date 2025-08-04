@@ -2,6 +2,7 @@ package cn.mmf.tls.data.tag;
 
 import java.util.concurrent.CompletableFuture;
 
+import cn.mmf.tls.item.ItemRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -22,6 +23,14 @@ public class TLSItemTagsProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider lookup) {
     	tag(TLSItemTags.BAMBOO).add(Items.BAMBOO);
     	tag(TLSItemTags.LEAVES_CHERRY).add(Items.CHERRY_LEAVES).addOptional(new ResourceLocation("sakura", "sakuraleaves"));
+    	tag(TLSItemTags.RESEARCH_CONSUMABLE)
+    	.add(
+    			ItemRegistry.SCROLL_TENGU_VOL1.get(), 
+    			ItemRegistry.SCROLL_TENGU_VOL2.get(), 
+    			ItemRegistry.SCROLL_KATANA.get(), 
+    			ItemRegistry.SAKURA_FULL.get(), 
+    			ItemRegistry.SCROLL_STAR.get()
+    		);
     }
 
 }

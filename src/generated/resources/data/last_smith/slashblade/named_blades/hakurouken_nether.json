@@ -2,14 +2,28 @@
   "enchantments": [
     {
       "id": "minecraft:smite",
+      "lvl": 4
+    },
+    {
+      "id": "minecraft:power",
       "lvl": 2
+    },
+    {
+      "id": "minecraft:sharpness"
+    },
+    {
+      "id": "minecraft:fire_aspect"
     }
   ],
   "name": "last_smith:hakurouken_nether",
   "properties": {
-    "attack_base": 2.0,
+    "attack_base": 3.0,
     "max_damage": 70,
     "slash_art": "slashblade:drive_vertical",
+    "special_effects": [
+      "last_smith:extra_smite",
+      "slashblade:wither_edge"
+    ],
     "sword_type": [
       "bewitched"
     ]

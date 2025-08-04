@@ -14,9 +14,6 @@ public class RecipeSerializerRegistry {
             .create(ForgeRegistries.RECIPE_TYPES, TheLastSmith.MODID);
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZER = DeferredRegister
             .create(ForgeRegistries.RECIPE_SERIALIZERS, TheLastSmith.MODID);
-
-    public static final RegistryObject<RecipeSerializer<?>> SLASHBLADE_SMITHING = RECIPE_SERIALIZER
-            .register("slashblade_smithing", () -> SlashBladeSmithingRecipe.SERIALIZER);
     
     public static final RegistryObject<RecipeType<TLSResearchRecipe>> RESEARCH_RECIPE_TYPE = RECIPE_TYPES
             .register("research", () -> recipeType("research"));

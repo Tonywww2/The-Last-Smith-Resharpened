@@ -2,7 +2,7 @@
   "enchantments": [
     {
       "id": "minecraft:smite",
-      "lvl": 2
+      "lvl": 3
     }
   ],
   "name": "last_smith:hakurouken",
@@ -10,6 +10,9 @@
     "attack_base": 2.0,
     "max_damage": 70,
     "slash_art": "slashblade:drive_vertical",
+    "special_effects": [
+      "last_smith:extra_smite"
+    ],
     "sword_type": [
       "bewitched"
     ]

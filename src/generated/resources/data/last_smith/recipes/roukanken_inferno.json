@@ -1,0 +1,23 @@
+{
+  "type": "slashblade:slashblade_smithing",
+  "addition": {
+    "tag": "forge:ingots/netherite"
+  },
+  "base": {
+    "type": "slashblade:blade",
+    "item": "slashblade:slashblade",
+    "request": {
+      "enchantments": [
+        {
+          "id": "minecraft:fire_aspect"
+        }
+      ],
+      "kill": 1000,
+      "name": "last_smith:roukanken"
+    }
+  },
+  "blade": "last_smith:roukanken_nether",
+  "template": {
+    "item": "last_smith:scroll_yamato"
+  }
+}

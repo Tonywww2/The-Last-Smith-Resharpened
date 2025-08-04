@@ -9,7 +9,10 @@
   "properties": {
     "attack_base": 5.0,
     "max_damage": 70,
-    "slash_art": "slashblade:drive_vertical",
+    "slash_art": "last_smith:sakura_blistering_swords",
+    "special_effects": [
+      "last_smith:smite_se"
+    ],
     "sword_type": [
       "bewitched"
     ]

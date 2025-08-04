@@ -1,5 +1,5 @@
 {
-  "type": "last_smith:slashblade_smithing",
+  "type": "slashblade:slashblade_smithing",
   "addition": {
     "type": "slashblade:blade",
     "item": "slashblade:slashblade_silverbamboo",

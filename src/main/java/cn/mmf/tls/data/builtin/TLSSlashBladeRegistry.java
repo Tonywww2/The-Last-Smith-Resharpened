@@ -5,11 +5,13 @@ import java.util.List;
 import org.apache.commons.compress.utils.Lists;
 
 import cn.mmf.tls.TheLastSmith;
+import cn.mmf.tls.se.TLSSpecialEffectRegistry;
 import cn.mmf.tls.slasharts.TLSSlashArtsRegistry;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.client.renderer.CarryType;
 import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.registry.SlashArtsRegistry;
+import mods.flammpfeil.slashblade.registry.SpecialEffectsRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.EnchantmentDefinition;
 import mods.flammpfeil.slashblade.registry.slashblade.PropertiesDefinition;
 import mods.flammpfeil.slashblade.registry.slashblade.RenderDefinition;
@@ -58,7 +60,23 @@ public class TLSSlashBladeRegistry {
     public static final ResourceKey<SlashBladeDefinition> GOLDENBAMBOO = register("goldenbamboo");
     public static final ResourceKey<SlashBladeDefinition> SILVERBAMBOO_BLOOD = register("silverbamboo_blood");
     
+    public static final ResourceKey<SlashBladeDefinition> SAGEQUOIA = register("sagequoia");
+    
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
+    	
+    	bootstrap.register(SAGEQUOIA,
+                new SlashBladeDefinition(TheLastSmith.prefix("sagequoia"),
+                        RenderDefinition.Builder
+                                .newInstance()
+                                .textureName(TheLastSmith.prefix("model/named/sagequoia/texture.png"))
+                                .modelName(TheLastSmith.prefix("model/named/sagequoia/model.obj")).build(),
+                        PropertiesDefinition.Builder.newInstance()
+                        	.baseAttackModifier(6.0F).maxDamage(113)
+                        	.slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                        	.defaultSwordType(List.of(SwordType.BEWITCHED)).build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3))));
     	
     	bootstrap.register(BAMBOO_TOP,
                 new SlashBladeDefinition(TheLastSmith.prefix("bamboo_top"),
@@ -67,7 +85,7 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/bamboolight/bamboo_top.png"))
                                 .modelName(SlashBlade.prefix("model/blade.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
+                        .baseAttackModifier(4.0F).maxDamage(70)
                         .build(),
                         Lists.newArrayList()));
     	
@@ -78,9 +96,14 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/bamboolight/bamboo_top.png"))
                                 .modelName(SlashBlade.prefix("model/named/yamato.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
+                        .baseAttackModifier(6.0F).maxDamage(75)
+                        .defaultSwordType(List.of(SwordType.BEWITCHED))
+                        .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
                         .build(),
-                        Lists.newArrayList()));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 2), 
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 1),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 2))
+                        ));
     	
     	bootstrap.register(SILVERBAMBOO_TOP,
                 new SlashBladeDefinition(TheLastSmith.prefix("silverbamboo_top"),
@@ -100,9 +123,16 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/bamboolight/goldenbamboo.png"))
                                 .modelName(SlashBlade.prefix("model/named/yamato.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
+                        .baseAttackModifier(6.0F).maxDamage(33)
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId())
+                        .defaultSwordType(List.of(SwordType.BEWITCHED))
                         .build(),
-                        Lists.newArrayList()));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SOUL_SPEED), 2),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 1),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 1),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3))
+                        ));
+    	
     	bootstrap.register(SILVERBAMBOO_BLOOD,
                 new SlashBladeDefinition(TheLastSmith.prefix("silverbamboo_blood"),
                         RenderDefinition.Builder
@@ -110,9 +140,15 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/bamboolight/silverbamboo_blood.png"))
                                 .modelName(SlashBlade.prefix("model/named/yamato.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
+                        .baseAttackModifier(5.0F).maxDamage(50)
+                        .defaultSwordType(List.of(SwordType.BEWITCHED))
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId())
+                        .slashArtsType(SlashArtsRegistry.CIRCLE_SLASH.getId())
                         .build(),
-                        Lists.newArrayList()));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 1), 
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 1),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2))
+                        ));
     	
       	bootstrap.register(NAGASADA,
                 new SlashBladeDefinition(TheLastSmith.prefix("nagasada"),
@@ -134,10 +170,12 @@ public class TLSSlashBladeRegistry {
                                 .newInstance()
                                 .textureName(TheLastSmith.prefix("model/named/sekiro/kusabimaru.png"))
                                 .modelName(TheLastSmith.prefix("model/named/sekiro/kusabimaru.obj"))
+                                .effectColor(0XEEC0C0C0)
                                 .standbyRenderType(CarryType.KATANA)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                         .baseAttackModifier(5.0F).maxDamage(70)
+                        .slashArtsType(TLSSlashArtsRegistry.IAI_CROSS.getId())
                         .build(),
                         Lists.newArrayList()));
     	
@@ -146,12 +184,13 @@ public class TLSSlashBladeRegistry {
                         RenderDefinition.Builder.newInstance()
                         	.textureName(TheLastSmith.prefix("model/named/sekiro/fushigiri.png"))
                             .modelName(TheLastSmith.prefix("model/named/sekiro/fushigiri.obj"))
-                            .effectColor(0XDD3E0000)
+                            .effectColor(0XFF8C0000)
                             .standbyRenderType(CarryType.NINJA)
                             .build(),
                         PropertiesDefinition.Builder.newInstance().baseAttackModifier(9.0F)
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .addSpecialEffect(TLSSpecialEffectRegistry.FUSHIGIRI_SE.getId())
+                                .slashArtsType(TLSSlashArtsRegistry.FUSHIGIRI.getId())
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 2), 
                         		new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2),
@@ -160,9 +199,12 @@ public class TLSSlashBladeRegistry {
 
         bootstrap.register(YAMATO,
                 new SlashBladeDefinition(TheLastSmith.prefix("yamato_neo"),
-                        RenderDefinition.Builder.newInstance().textureName(TheLastSmith.prefix("model/named/yamato_neo/yamato_neo.png"))
-                                .modelName(TheLastSmith.prefix("model/named/yamato_neo/yamato_neo.obj")).build(),
-                        PropertiesDefinition.Builder.newInstance().baseAttackModifier(7.0F)
+                        RenderDefinition.Builder.newInstance()
+                        	.textureName(TheLastSmith.prefix("model/named/yamato_neo/yamato_neo.png"))
+                            .modelName(TheLastSmith.prefix("model/named/yamato_neo/yamato_neo.obj")).build(),
+                        PropertiesDefinition.Builder.newInstance().baseAttackModifier(9.0F)
+                        		.addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId())
+                        		.addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SHARPNESS.getId())
                                 .defaultSwordType(List.of(SwordType.BEWITCHED)).build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SOUL_SPEED), 2),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
@@ -178,6 +220,7 @@ public class TLSSlashBladeRegistry {
                         .baseAttackModifier(5.0F).maxDamage(70)
                         .build(),
                         Lists.newArrayList()));
+    	
     	bootstrap.register(MURAMASA_KAGURA,
                 new SlashBladeDefinition(TheLastSmith.prefix("muramasa_kagura"),
                         RenderDefinition.Builder
@@ -185,9 +228,9 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/odachi/murasama_kagura.png"))
                                 .modelName(TheLastSmith.prefix("model/named/odachi/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
+                        .baseAttackModifier(8.0F).maxDamage(70)
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.CIRCLE_SLASH.getId())
+                        .slashArtsType(SlashArtsRegistry.DRIVE_HORIZONTAL.getId())
                         .build(),
                         Lists.newArrayList()));
     	
@@ -227,12 +270,14 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/smith/texture_wind.png"))
                                 .modelName(TheLastSmith.prefix("model/named/smith/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
-                        
+                        .baseAttackModifier(10.0F).maxDamage(70)
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SHARPNESS.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                        .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
                         .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SOUL_SPEED), 2),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 2),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FALL_PROTECTION), 4))));
     	bootstrap.register(AMAGUMO_KUMO,
                 new SlashBladeDefinition(TheLastSmith.prefix("amagumo_kumo"),
                         RenderDefinition.Builder
@@ -240,27 +285,39 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/smith/texture_cloud.png"))
                                 .modelName(SlashBlade.prefix("model/named/agito.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
-                        
+                        .baseAttackModifier(10.0F).maxDamage(70)
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SMITE.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                        .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                         .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 2),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SWEEPING_EDGE), 1))));
     	
     	bootstrap.register(AMAGUMO_MUNIN,
                 new SlashBladeDefinition(TheLastSmith.prefix("amagumo_munin"),
                         RenderDefinition.Builder
                                 .newInstance()
-                                .effectColor(0xffb7c5)
+                                .effectColor(0xff1111)
                                 .textureName(TheLastSmith.prefix("model/named/smith/texture_final.png"))
                                 .modelName(TheLastSmith.prefix("model/named/smith/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(50.0F).maxDamage(70)
-                        
+                        .baseAttackModifier(15.0F).maxDamage(100)
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTREME_SHARPNESS.getId())
+                        .addSpecialEffect(TLSSpecialEffectRegistry.BEWITCHED_POWER.getId())
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SMITE.getId())
+                        .addSpecialEffect(SpecialEffectsRegistry.WITHER_EDGE.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                        .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
                         .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.SOUL_SPEED), 2),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FALL_PROTECTION), 4),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SWEEPING_EDGE), 3)
+                        		)
+                        ));
     	bootstrap.register(EXORCISM_SAKURA,
                 new SlashBladeDefinition(TheLastSmith.prefix("exorcism_sakura"),
                         RenderDefinition.Builder
@@ -270,9 +327,9 @@ public class TLSSlashBladeRegistry {
                                 .modelName(TheLastSmith.prefix("model/named/sakura/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
                         .baseAttackModifier(5.0F).maxDamage(70)
-                        
+                        .addSpecialEffect(TLSSpecialEffectRegistry.SMITE_SE.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                        .slashArtsType(TLSSlashArtsRegistry.SAKURA_BLISTERING_SWORDS.getId())
                         .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 2))));
     	
@@ -280,13 +337,14 @@ public class TLSSlashBladeRegistry {
                 new SlashBladeDefinition(TheLastSmith.prefix("exorcism_ginkgo"),
                         RenderDefinition.Builder
                                 .newInstance()
+                                .effectColor(0xFFDD32)
                                 .textureName(TheLastSmith.prefix("model/named/sakura/texture_1.png"))
                                 .modelName(TheLastSmith.prefix("model/named/sakura/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
                         .baseAttackModifier(5.0F).maxDamage(70)
-                        
+                        .addSpecialEffect(TLSSpecialEffectRegistry.SMITE_SE.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                        .slashArtsType(TLSSlashArtsRegistry.SAKURA_BLISTERING_SWORDS.getId())
                         .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 2))));
     	bootstrap.register(EXORCISM_YUKI,
@@ -297,9 +355,9 @@ public class TLSSlashBladeRegistry {
                                 .modelName(TheLastSmith.prefix("model/named/sakura/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
                         .baseAttackModifier(5.0F).maxDamage(70)
-                        
+                        .addSpecialEffect(TLSSpecialEffectRegistry.SMITE_SE.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                        .slashArtsType(TLSSlashArtsRegistry.SAKURA_BLISTERING_SWORDS.getId())
                         .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 2))));
     	
@@ -307,28 +365,37 @@ public class TLSSlashBladeRegistry {
                 new SlashBladeDefinition(TheLastSmith.prefix("evil_kataware"),
                         RenderDefinition.Builder
                                 .newInstance()
+                                .effectColor(0x990000)
                                 .textureName(TheLastSmith.prefix("model/named/sakura/texture_3.png"))
                                 .modelName(TheLastSmith.prefix("model/named/sakura/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
-                        
+                        .baseAttackModifier(6.0F).maxDamage(70)
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                        .slashArtsType(SlashArtsRegistry.CIRCLE_SLASH.getId())
                         .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 2))));
+                        List.of(
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 2),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 1)
+                        		)));
     	bootstrap.register(EVIL_SHURA,
                 new SlashBladeDefinition(TheLastSmith.prefix("evil_shura"),
                         RenderDefinition.Builder
                                 .newInstance()
+                                .effectColor(0x6B0000)
                                 .textureName(TheLastSmith.prefix("model/named/sakura/texture_4.png"))
                                 .modelName(TheLastSmith.prefix("model/named/sakura/model.obj")).build(),
-                        PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(5.0F).maxDamage(70)
-                        
-                        .defaultSwordType(List.of(SwordType.BEWITCHED))
-                        .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
-                        .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 2))));
+                            PropertiesDefinition.Builder.newInstance()
+                            .baseAttackModifier(7.0F).maxDamage(70)
+                            .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId())
+                            .defaultSwordType(List.of(SwordType.BEWITCHED))
+                            .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                            .build(),
+                            List.of(
+                            		new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 2),
+                            		new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2),
+                            		new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 1)
+                            		)));
     	
     	
     	bootstrap.register(ROUKANKEN,
@@ -339,12 +406,12 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/roukan/texture.png"))
                                 .modelName(TheLastSmith.prefix("model/named/roukan/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(10.0F).maxDamage(70)
-                        
+                        .baseAttackModifier(9.0F).maxDamage(70)
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SHARPNESS.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
                         .slashArtsType(TLSSlashArtsRegistry.Transmigration_Slash.getId())
                         .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3))));
     	bootstrap.register(HAKUROUKEN,
                 new SlashBladeDefinition(TheLastSmith.prefix("hakurouken"),
                         RenderDefinition.Builder
@@ -354,11 +421,11 @@ public class TLSSlashBladeRegistry {
                                 .modelName(TheLastSmith.prefix("model/named/hakurou/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
                         .baseAttackModifier(2.0F).maxDamage(70)
-                        
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SMITE.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
                         .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
                         .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 2))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3))));
     	
     	bootstrap.register(ROUKANKEN_NETHER,
                 new SlashBladeDefinition(TheLastSmith.prefix("roukanken_nether"),
@@ -369,11 +436,17 @@ public class TLSSlashBladeRegistry {
                                 .modelName(TheLastSmith.prefix("model/named/roukan/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
                         .baseAttackModifier(10.0F).maxDamage(70)
-                        
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTREME_SHARPNESS.getId())
+                        .addSpecialEffect(SpecialEffectsRegistry.WITHER_EDGE.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
                         .slashArtsType(TLSSlashArtsRegistry.Transmigration_Slash.getId())
                         .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 2))));
+                        List.of(
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 4),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 2),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 1)
+                		)
+                ));
     	bootstrap.register(HAKUROUKEN_NETHER,
                 new SlashBladeDefinition(TheLastSmith.prefix("hakurouken_nether"),
                         RenderDefinition.Builder
@@ -382,12 +455,19 @@ public class TLSSlashBladeRegistry {
                                 .textureName(TheLastSmith.prefix("model/named/hakurou/texture_tx.png"))
                                 .modelName(TheLastSmith.prefix("model/named/hakurou/model.obj")).build(),
                         PropertiesDefinition.Builder.newInstance()
-                        .baseAttackModifier(2.0F).maxDamage(70)
-                        
+                        .baseAttackModifier(3.0F).maxDamage(70)
+                        .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SMITE.getId())
+                        .addSpecialEffect(SpecialEffectsRegistry.WITHER_EDGE.getId())
                         .defaultSwordType(List.of(SwordType.BEWITCHED))
                         .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
                         .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 2))));
+                        List.of(
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 4),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 2),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 1),
+                        		new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 1)
+                		)
+                ));
 	}
     
     private static ResourceLocation getEnchantmentID(Enchantment enchantment) {

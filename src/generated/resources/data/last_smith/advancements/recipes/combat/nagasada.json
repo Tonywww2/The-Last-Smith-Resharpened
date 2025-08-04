@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_scroll_katana": {
+    "has_scroll_sakura": {
       "conditions": {
         "items": [
           {
             "items": [
-              "last_smith:scroll_katana"
+              "last_smith:scroll_sakura"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_scroll_katana",
+      "has_scroll_sakura",
       "has_the_recipe"
     ]
   ],

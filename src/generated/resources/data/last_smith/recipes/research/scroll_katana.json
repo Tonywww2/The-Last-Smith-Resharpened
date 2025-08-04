@@ -1,7 +1,9 @@
 {
   "type": "last_smith:research",
   "blade": {
-    "item": "slashblade:slashblade"
+    "type": "slashblade:blade",
+    "item": "slashblade:slashblade",
+    "request": {}
   },
   "ink": {
     "tag": "forge:dyes/black"

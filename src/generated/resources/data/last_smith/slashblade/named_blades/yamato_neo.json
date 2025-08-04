@@ -15,7 +15,11 @@
   ],
   "name": "last_smith:yamato_neo",
   "properties": {
-    "attack_base": 7.0,
+    "attack_base": 9.0,
+    "special_effects": [
+      "last_smith:extra_power",
+      "last_smith:extra_sharpness"
+    ],
     "sword_type": [
       "bewitched"
     ]

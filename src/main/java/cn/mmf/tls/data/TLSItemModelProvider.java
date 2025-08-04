@@ -45,6 +45,8 @@ public class TLSItemModelProvider extends AbstractItemModelProvider {
         normalItem(ItemRegistry.SCROLL_MURAMASA, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_STAR, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_GOD, TheLastSmith.prefix("scroll"));
+        normalItem(ItemRegistry.SCROLL_YAMATO, TheLastSmith.prefix("scroll"));
+        normalItem(ItemRegistry.SCROLL_SHURA, TheLastSmith.prefix("scroll_blood"));
         normalItem(ItemRegistry.SCROLL_BLOOD, TheLastSmith.prefix("scroll_blood"));
         normalItem(ItemRegistry.SCROLL_MORTAL, TheLastSmith.prefix("scroll_blood"));
         normalItem(ItemRegistry.SCROLL_BEWITCHED, TheLastSmith.prefix("scroll_blood"));

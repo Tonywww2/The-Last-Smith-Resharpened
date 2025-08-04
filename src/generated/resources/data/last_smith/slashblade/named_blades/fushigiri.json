@@ -20,7 +20,10 @@
   "name": "last_smith:fushigiri",
   "properties": {
     "attack_base": 9.0,
-    "slash_art": "slashblade:sakura_end",
+    "slash_art": "last_smith:fushigiri",
+    "special_effects": [
+      "last_smith:fushigiri_se"
+    ],
     "sword_type": [
       "bewitched"
     ]
@@ -28,7 +31,7 @@
   "render": {
     "carry_type": "ninja",
     "model": "last_smith:model/named/sekiro/fushigiri.obj",
-    "summon_sword_color": -583139328,
+    "summon_sword_color": -7602176,
     "texture": "last_smith:model/named/sekiro/fushigiri.png"
   }
 }
