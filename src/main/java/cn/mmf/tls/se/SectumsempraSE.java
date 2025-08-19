@@ -11,6 +11,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -37,8 +38,18 @@ public class SectumsempraSE extends SpecialEffect {
         if (summonedSword.getShooter() instanceof ServerPlayer player) {
             ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
             stack.getCapability(CapabilitySlashBlade.BLADESTATE).ifPresent((state) -> {
-                doSectumsempra(state, player, summonedSword);
-                summonedSword.setDamage(summonedSword.getDamage() + 2.0f);
+                Entity target = event.getTarget();
+                doSectumsempra(state, player, target);
+                summonedSword.setDamage(summonedSword.getDamage() + 1.0f);
+                if (target instanceof LivingEntity living) {
+                    float extraDamage1 = living.getHealth() * 0.04f + 1f;
+                    living.invulnerableTime = 0;
+                    living.hurt(player.damageSources().indirectMagic(summonedSword, player), extraDamage1);
+
+                    float extraDamage2 = 1f;
+                    living.invulnerableTime = 0;
+                    living.hurt(player.damageSources().indirectMagic(summonedSword, player), extraDamage2);
+                }
 
             });
 
