@@ -82,6 +82,8 @@
   "itemGroup.the_last_smith": "最后的太刀匠人",
   "last_smith.jei.research": "研究",
   "last_smith.jei.cauldron": "淬火",
+  "emi.category.last_smith.research": "研究",
+  "emi.category.last_smith.cauldron": "淬火",
   "last_smith.jei.cauldron_need_water": "炼药锅里需要有水。",
   "enchantment.last_smith.spirit_slash": "灵魂切裂",
   

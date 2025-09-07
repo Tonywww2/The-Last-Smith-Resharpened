@@ -27,7 +27,10 @@ public class TLSLangProvider extends AbstractLangProvider {
 		
 		add("last_smith.jei.cauldron", "Cauldron Quenching");
 		add("last_smith.jei.cauldron_need_water", "Need some water in the cauldron.");
-		
+
+		add("emi.category.last_smith.research", "Researching");
+		add("emi.category.last_smith.cauldron", "Cauldron Quenching");
+
 		add("container.last_smith.research.error_tooltip", "Can't do any research this way");
 		add("container.last_smith.research.missing_blade_tooltip", "Add the blade or research");
 		add("container.last_smith.research.missing_paper_tooltip", "Add papers or research");
