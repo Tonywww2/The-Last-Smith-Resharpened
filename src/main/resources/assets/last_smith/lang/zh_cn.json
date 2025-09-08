@@ -140,6 +140,8 @@
 	"se.last_smith.smite_se": "驱魔刃",
 	"slash_art.last_smith.fushigiri": "绝技「不死斩」",
 	"slash_art.last_smith.iai_cross": "苇名流「苇名十字斩」",
-	"slash_art.last_smith.sakura_blistering_swords": "樱流「烈风」"
+	"slash_art.last_smith.sakura_blistering_swords": "樱流「烈风」",
 
+	"emi.category.last_smith.research": "研究",
+	"emi.category.last_smith.cauldron": "淬火"
 }
