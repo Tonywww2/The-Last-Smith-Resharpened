@@ -1,4 +1,5 @@
 {
+  "creativeGroup": "last_smith:slashblade",
   "name": "last_smith:muramasa_kagura",
   "properties": {
     "attack_base": 8.0,
@@ -9,7 +10,6 @@
     ]
   },
   "render": {
-    "carry_type": "default",
     "model": "last_smith:model/named/odachi/model.obj",
     "texture": "last_smith:model/named/odachi/murasama_kagura.png"
   }

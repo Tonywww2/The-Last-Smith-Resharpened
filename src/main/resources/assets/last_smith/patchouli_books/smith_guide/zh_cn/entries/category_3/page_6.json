@@ -1,0 +1,18 @@
+{
+   "name" : "大太刀「」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/odachi/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/odachi/odachi.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.odachi\"}}",
+   "category" : "last_smith:category_3",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "俗话说一寸长一寸强，那么肯定有人锻造更长的刀剑来做到更强。$(br2)大太刀就是在这样一个想法当中诞生的，它具有更长的刀刃和更大的刀返。$(br2)代价是能灵活使用大太刀的人寥寥无几，所以并没有多少刀匠真正去锻造大太刀。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:nameless_odachi",
+         "text" : "你肯定需要大太刀锻造笔记来锻造大太刀，因为其构造和一般的刀剑是不一样的。"
+      }
+   ],
+   "advancement":"last_smith:blade",
+   "sortnum" : 5
+}

@@ -29,7 +29,6 @@ public class TLSItemModelProvider extends AbstractItemModelProvider {
                 itemBlock(block::getBlock);
             else
                 normalItem(item);
-           
         });
         
         normalItem(ItemRegistry.SCROLL_BASIC, TheLastSmith.prefix("scroll"));
@@ -42,15 +41,22 @@ public class TLSItemModelProvider extends AbstractItemModelProvider {
         normalItem(ItemRegistry.SCROLL_EXORCISM, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_KATANA, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_ODACHI, TheLastSmith.prefix("scroll_double"));
+        normalItem(ItemRegistry.SCROLL_NAMED, TheLastSmith.prefix("scroll_double"));
         normalItem(ItemRegistry.SCROLL_MURAMASA, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_STAR, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_GOD, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_YAMATO, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_SHURA, TheLastSmith.prefix("scroll_blood"));
+        normalItem(ItemRegistry.SCROLL_CAUSALITY, TheLastSmith.prefix("scroll"));
+
         normalItem(ItemRegistry.SCROLL_BLOOD, TheLastSmith.prefix("scroll_blood"));
         normalItem(ItemRegistry.SCROLL_MORTAL, TheLastSmith.prefix("scroll_blood"));
+        
+        normalItem(ItemRegistry.SCROLL_SHARPNESS, TheLastSmith.prefix("scroll_blood"));
         normalItem(ItemRegistry.SCROLL_BEWITCHED, TheLastSmith.prefix("scroll_blood"));
+        
         normalItem(ItemRegistry.SCROLL_HEIL, TheLastSmith.prefix("scroll_blood"));
+        
         normalItem(ItemRegistry.SCROLL_TENGU_VOL1, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_TENGU_VOL2, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_TENGU_FULL, TheLastSmith.prefix("scroll_double"));

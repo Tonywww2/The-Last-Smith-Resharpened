@@ -1,0 +1,18 @@
+{
+   "name" : "魂櫻刀「永貞」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/nagasada/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/nagasada/texture.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.nagasada\"}}",
+   "category" : "last_smith:category_4",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "「永貞」是第一振魂櫻刀，算是一種試作品。$(br2)實際上，這振刀在最初確實沒有吸引我的地方。硬要説的話，不知為何淬火也不能使其彎曲，甚至比其他刀更為堅韌是它最大的特點。$(br2)直到我聽取了其他刀匠的建議來鍛造長刀之後，我才意識到魂櫻的強大之處……"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:nagasada",
+         "text" : "或許你需要一些魂櫻筆記用於鍛造時候的參考。"
+      }
+   ],
+   "advancement":"last_smith:blade_sakura",
+   "sortnum" : 1
+}

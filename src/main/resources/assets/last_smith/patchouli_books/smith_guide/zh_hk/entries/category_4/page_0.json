@@ -1,0 +1,26 @@
+{
+   "name" : "魂櫻之力",
+   "icon" : "last_smith:sakura_full",
+   "category" : "last_smith:category_4",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "我開始鍛造刀劍不久後的一年春天，小屋附近櫻花盛開。幾片花瓣落在了耀魂碎片上，竟然也燃起了魂靈的火焰。這些花瓣在後來沒有枯萎的跡象，並且其靈力之盛讓我有了一絲想法。$(br2)我將這些花瓣收集起來，甚至嘗試人為製造這些花瓣，然後得到了魂櫻。"
+      },
+      {
+         "type" : "text",
+         "text" : "魂櫻似乎與耀魂有着相似的靈氣，但是我很快就感受到魂櫻的特別之處：它是更為純粹的魂靈，但也因此顯得更為“堅韌”。$(br2)我嘗試將魂櫻與鋼材結合起來，竟然真的得到了櫻色的鋼材。$(br2)起初我並不能相信這份鋼材，甚至鍛造出來第一振刀之後也沒有發現其特殊之處，然而很快我就發現魂櫻的潛力非同尋常……"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "last_smith:sakura",
+         "recipe2" : "last_smith:sakura_full"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:sakura_steel"
+      }
+   ],
+   "advancement":"last_smith:root",
+   "sortnum" : 0
+}

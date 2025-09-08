@@ -1,0 +1,19 @@
+{
+   "name" : "无铭「无名」",
+   "icon" : "slashblade:slashblade",
+   "category" : "last_smith:category_3",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "白鞘顶多只是保护刀条的器具，并非战斗的优先选择。$(br2)一振真正的好刀还需要合适的刀装，从刀柄到刀鞘都需要精心制造。$(br2)但刀装需要专门的匠人制作，制作竹光刀的匠人在刀装上倒是也有一定造诣。所以用竹光刀的刀装换上自己的刀条也是一部分刀匠的选择。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "slashblade:slashblade",
+         "recipe2" : "last_smith:slashblade_from_bamboolight",
+         "text" : "断裂的竹刀已经没有什么回收的意义了，还是扔掉的好。"
+      }
+   ],
+   "advancement":"last_smith:blade",
+   "sortnum" : 0
+}

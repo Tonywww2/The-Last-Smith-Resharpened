@@ -1,11 +1,12 @@
 {
+  "creativeGroup": "last_smith:slashblade",
   "enchantments": [
     {
       "id": "minecraft:soul_speed",
       "lvl": 2
     },
     {
-      "id": "minecraft:power",
+      "id": "minecraft:sharpness",
       "lvl": 2
     },
     {
@@ -19,7 +20,7 @@
     "max_damage": 70,
     "slash_art": "slashblade:sakura_end",
     "special_effects": [
-      "last_smith:extra_sharpness"
+      "last_smith:extreme_sharpness"
     ],
     "sword_type": [
       "bewitched"

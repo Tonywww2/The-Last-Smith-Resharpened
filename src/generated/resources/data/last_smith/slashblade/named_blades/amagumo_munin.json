@@ -1,4 +1,5 @@
 {
+  "creativeGroup": "last_smith:slashblade",
   "enchantments": [
     {
       "id": "minecraft:sharpness",
@@ -27,7 +28,7 @@
   ],
   "name": "last_smith:amagumo_munin",
   "properties": {
-    "attack_base": 15.0,
+    "attack_base": 17.0,
     "max_damage": 100,
     "slash_art": "slashblade:void_slash",
     "special_effects": [

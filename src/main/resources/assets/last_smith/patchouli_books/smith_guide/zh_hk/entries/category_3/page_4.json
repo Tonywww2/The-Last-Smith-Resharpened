@@ -1,0 +1,28 @@
+{
+   "name" : "剛劍「胴田貫」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade:model/named/muramasa/muramasa.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"slashblade:model/named/muramasa/doutanuki.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.slashblade.doutanuki\"}}",
+   "category" : "last_smith:category_3",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "有名的剛劍，能切裂耕地。$(br)切裂耕地指的是在田埂上疊放試斬用具，斬下之時能直接插入田埂之中。$(br2)可惜現在只是被一些殭屍浪費的鏽刀罷了。但我過去曾經修復過一振並送給犬走家的義弟了。"
+      },
+      {
+         "type" : "patchouli:spotlight",
+         "item" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade:model/named/muramasa/muramasa.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"slashblade:model/named/muramasa/sabigatana.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:1b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.slashblade.sabigatana\"}}",
+         "text" : "有些殭屍身上會持有鏽刀，可以想辦法奪過他手裏的刀。$(br2)似乎帶着斷刀的殭屍更多一些，但也有刀刃保存良好的鏽刀。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:sabigatana",
+         "text" : "如果遇到斷刀了，可以通過這種方式修復原有的刀條。$(br2)我相當不建議你去更換原有的刀條：那樣就不叫修復而是複製了。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:doutanuki",
+         "text" : "修復好的胴田貫，擁有原本的力量。"
+      }
+   ],
+   "advancement":"last_smith:blade",
+   "sortnum" : 3
+}

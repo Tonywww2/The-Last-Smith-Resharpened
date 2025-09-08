@@ -1,0 +1,34 @@
+{
+   "name" : "天雲「無念」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/smith/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/smith/texture_final.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.amagumo_munin\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "鍛造出的第三振天雲劍成了徹頭徹尾的失敗品，甚至還不如我最開始鍛造的「永貞」。$(br2)或許是長久勞累帶來的疲倦，也或許是過於自負和傲慢帶來的惡果，無論如何對於我而言這都是不可接受的失敗。$(br2)我獨自一人在鍛造屋內，感受着這失敗帶來的絕望。"
+      },
+      {
+         "type" : "text",
+         "text" : "再次醒來的時候，我不知為何身處家中。$(br2)前來探望的友人告訴我：我倒在鍛造屋裏，被一振刀刺穿了身體。雖然最後勉強搶救回來，但是也因此昏迷了很長時間不醒。$(br2)在這期間，以博麗為名的大結界被展開，將我們這一寸天地與外界相隔離開來。我們不再被外界的人類所侵擾，而剩下的人類將一直信仰我們……"
+      },
+      {
+         "type" : "text",
+         "text" : "我作為刀匠的生涯，在這次事故之後劃上了句號。$(br2)我失去了再度拿起鍛造錘的勇氣，也失去了再次鍛造利刃的理由。$(br2)我甚至已經忘了我當初為何選擇成為刀匠，而現在，最後的天狗刀匠也已經離去了。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:amagumo_munin",
+         "text" : "這振刀便是我最後的作品——天雲「無念」，我自己的佩刀。但我也沒有這份勇氣去拿起它。"
+      },
+      {
+         "type" : "text",
+         "text" : "我跟隨父母迴歸鴉天狗的本業，過去了很長一段時間之後，有一名唐傘妖怪找到我，希望能拜師學藝。$(br2)我極力拒絕，稱我自己已經沒有鍛造的能力。但在她説出那魂櫻雙刀的名號，以及其他激勵我的話語之後，我還是決定收她為徒。"
+      },
+      {
+         "type" : "text",
+         "text" : "撰寫這本書，不僅是為了讓那些刀的故事得以流傳下去，更多是為了讓我自己心安。$(br2)我也即將踏上再度離開家鄉的旅途，只為了我所熱愛的新生事物。$(br2)如同我當初成為刀匠一般，熱愛着創造的過程。"
+      }
+   ],
+   "advancement":"last_smith:munin",
+   "sortnum" : 10
+}

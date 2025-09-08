@@ -13,6 +13,6 @@
   },
   "blade": "last_smith:kusabimaru",
   "template": {
-    "item": "last_smith:scroll_katana"
+    "item": "last_smith:scroll_named"
   }
 }

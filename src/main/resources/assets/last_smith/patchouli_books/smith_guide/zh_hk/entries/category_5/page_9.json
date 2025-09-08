@@ -1,0 +1,18 @@
+{
+   "name" : "天雲「殘雲」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade:model/named/agito.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/smith/texture_cloud.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.amagumo_kumo\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "現在來看，當時的決定有些過於杞人憂天了。畢竟那些妖刀的力量或許撼動不了我們的地位。$(br2)但當時年輕氣盛的我還是感受到了恐懼，並決定為自己的族羣鍛造守護的利刃。$(br2)但實際上我們本就足夠強大，足以抵禦來犯之敵。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:amagumo_kaze",
+         "text" : "天雲「殘雲」便是第二振天雲劍，我父親的佩劍。$(br2)偶爾能看到他攜帶着這振刀參加一些重大場合，但他對我成為刀匠這件事一直以來都有些不滿。"
+      }
+   ],
+   "advancement":"last_smith:bewitched",
+   "sortnum" : 9
+}

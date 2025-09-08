@@ -1,0 +1,18 @@
+{
+   "name" : "刀剑的研究",
+   "icon" : "last_smith:research_table",
+   "category" : "last_smith:category_2",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "本人有一个习惯：拿到一柄新刀之后，会将其放在书桌上进行拆解。拆解完成之后会专门研究并记录这柄刀的特点，然后重新装入刀拵完成组装。$(br)剩下来的记录我会专门收藏起来，以供自己锻造新刀时可以参考。$(br)虽然在锻造新刀的时候查阅过的记录会因为各种原因遗失，但是这不失为一个好的习惯。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "last_smith:research_table",
+         "text" : "细致研究物品是一个很好的习惯。"
+      }
+   ],
+   "advancement":"last_smith:root",
+   "sortnum" : 1
+}

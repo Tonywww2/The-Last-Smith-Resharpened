@@ -1,0 +1,18 @@
+{
+   "name" : "「银纸竹光」",
+   "icon" : "slashblade:slashblade_silverbamboo",
+   "category" : "last_smith:category_2",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "竹光刀的完成品，因其制作工艺而被称为「银纸竹光」。$(br)利用铁箔或银箔等材料，用鸡蛋清贴合在刀刃上，再加以涂装。$(br2)对于那些穷困潦倒的浪人而言，竹光刀是他们为数不多能信赖的刀剑。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:slashblade_silverbamboo",
+         "text" : "外行人很难一眼判断出苇名地区出产的竹光刀与钢刀，这也足以证明苇名地区竹光刀技艺的精湛。"
+      }
+   ],
+   "advancement":"last_smith:scrolls",
+   "sortnum" : 3
+}

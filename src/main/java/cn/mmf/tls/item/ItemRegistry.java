@@ -6,6 +6,7 @@ import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.block.BlockRegistry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,8 +20,18 @@ public class ItemRegistry {
             () -> new BlockItem(BlockRegistry.RESEARCH_TABLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> YAKIBATSUCHI = register("yakibatsuchi", ItemRegistry::newMaterial);
     
-    public static final RegistryObject<Item> SAKURA = register("sakura", ItemRegistry::newMaterial);
-    public static final RegistryObject<Item> SAKURA_FULL = register("sakura_full", ItemRegistry::newMaterial);
+    public static final RegistryObject<Item> SAKURA = register("sakura", () -> new Item(new Item.Properties()) {
+    	@Override
+        public int getEnchantmentValue(ItemStack stack) {
+            return 20;
+        }
+    });
+    public static final RegistryObject<Item> SAKURA_FULL = register("sakura_full", () -> new Item(new Item.Properties()) {
+    	@Override
+        public int getEnchantmentValue(ItemStack stack) {
+            return 200;
+        }
+    });
     public static final RegistryObject<Item> SAKURA_STEEL_INGOT = register("sakura_steel_ingot", ItemRegistry::newMaterial);
     public static final RegistryObject<Item> SAKURA_SPHERE = register("sakura_sphere", ItemRegistry::newMaterial);
     
@@ -42,6 +53,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SCROLL_SAKURA = register("scroll_sakura", ItemRegistry::uncommonScroll);
     public static final RegistryObject<Item> SCROLL_KATANA = register("scroll_katana", ItemRegistry::uncommonScroll);
     public static final RegistryObject<Item> SCROLL_ODACHI = register("scroll_odachi", ItemRegistry::uncommonScroll);
+    public static final RegistryObject<Item> SCROLL_NAMED = register("scroll_named", ItemRegistry::uncommonScroll);
     public static final RegistryObject<Item> SCROLL_SAKURA_BLADE = register("scroll_sakura_blade", ItemRegistry::uncommonScroll);
     public static final RegistryObject<Item> SCROLL_EXORCISM = register("scroll_exorcism", ItemRegistry::uncommonScroll);
     public static final RegistryObject<Item> SCROLL_WOOD_KIWAMI = register("scroll_wood_kiwami", ItemRegistry::rareScroll);
@@ -52,8 +64,10 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SCROLL_GOD = register("scroll_god", ItemRegistry::rareScroll);
     public static final RegistryObject<Item> SCROLL_BLOOD = register("scroll_blood", ItemRegistry::rareScroll);
     public static final RegistryObject<Item> SCROLL_YAMATO= register("scroll_yamato", ItemRegistry::epicScroll);
+    public static final RegistryObject<Item> SCROLL_CAUSALITY= register("scroll_causality", ItemRegistry::epicScroll);
     public static final RegistryObject<Item> SCROLL_MORTAL = register("scroll_mortal", ItemRegistry::epicScroll);
     public static final RegistryObject<Item> SCROLL_HEIL = register("scroll_heil", ItemRegistry::epicScroll);
+    public static final RegistryObject<Item> SCROLL_SHARPNESS = register("scroll_sharpness", ItemRegistry::epicScroll);
     public static final RegistryObject<Item> SCROLL_BEWITCHED = register("scroll_bewitched", ItemRegistry::epicScroll);
     public static final RegistryObject<Item> SCROLL_TENGU_VOL1 = register("scroll_tengu_vol1", ItemRegistry::epicScroll);
     public static final RegistryObject<Item> SCROLL_TENGU_VOL2 = register("scroll_tengu_vol2", ItemRegistry::epicScroll);

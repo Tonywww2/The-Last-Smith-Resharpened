@@ -1,0 +1,33 @@
+{
+   "name" : "名刀「露台」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade:model/blade.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"model/rodai_netherite.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.slashblade.rodai_netherite\"}}",
+   "category" : "last_smith:category_3",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "嚴格來説，所謂露台是一系列將自己隨身用的防身刀具存入鞘中得來的刀劍的統稱。$(br2)雖然露台對於推動劍術發展起到了一定作用，不過很快就因為禁刀令的原因沒落了，況且這些刀也很難上得了枱面。$(br2)曾聽説還有人專門用極其稀有的合金鍛刀，其刃堅不可摧，但我並未親眼見過此刀。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:rodai_wooden",
+         "recipe2" : "slashblade:rodai_stone"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:rodai_iron",
+         "recipe2" : "slashblade:rodai_golden"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:rodai_diamond",
+         "recipe2" : "slashblade:rodai_netherite"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "slashblade:rodai_netherite_smithing",
+         "text" : "這是一種更為傳統的鍛造方法，需要一種鍛造模板。"
+      }
+   ],
+   "advancement":"last_smith:blade",
+   "sortnum" : 2
+}

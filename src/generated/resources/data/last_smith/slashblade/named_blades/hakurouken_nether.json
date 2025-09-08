@@ -1,4 +1,5 @@
 {
+  "creativeGroup": "last_smith:slashblade",
   "enchantments": [
     {
       "id": "minecraft:smite",
@@ -17,7 +18,6 @@
   ],
   "name": "last_smith:hakurouken_nether",
   "properties": {
-    "attack_base": 3.0,
     "max_damage": 70,
     "slash_art": "slashblade:drive_vertical",
     "special_effects": [
@@ -29,7 +29,7 @@
     ]
   },
   "render": {
-    "carry_type": "default",
+    "carry_type": "katana",
     "model": "last_smith:model/named/hakurou/model.obj",
     "summon_sword_color": 15921906,
     "texture": "last_smith:model/named/hakurou/texture_tx.png"

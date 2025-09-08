@@ -1,7 +1,7 @@
 {
   "type": "slashblade:slashblade_smithing",
   "addition": {
-    "tag": "forge:ingots/netherite"
+    "tag": "forge:storage_blocks/netherite"
   },
   "base": {
     "type": "slashblade:blade",
@@ -12,8 +12,9 @@
           "id": "minecraft:fire_aspect"
         }
       ],
-      "kill": 1000,
-      "name": "last_smith:hakurouken"
+      "kill": 1500,
+      "name": "last_smith:hakurouken",
+      "proud_soul": 5000
     }
   },
   "blade": "last_smith:hakurouken_nether",

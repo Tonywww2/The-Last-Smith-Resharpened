@@ -15,7 +15,7 @@
           "id": "minecraft:sweeping"
         }
       ],
-      "kill": 500,
+      "kill": 1000,
       "name": "last_smith:nameless_odachi",
       "refine": 10
     }

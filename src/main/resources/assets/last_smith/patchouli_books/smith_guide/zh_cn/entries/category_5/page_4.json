@@ -1,0 +1,25 @@
+{
+   "name" : "「狱界剑」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/roukan/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/roukan/texture_tx.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.roukanken_nether\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "在阎魔刀再次出现之后，一名黑衣人的到访让我真正感受到了危机感。$(br2)他带着两振据说是从地狱当中诞生的刀，希望我给这两振刀做一个评价。$(br2)当我看到这一长一短的双刀，以为自己再一次看到了「魂樱之双刀」。"
+      },
+      {
+         "type" : "text",
+         "text" : "接过刀后，我的疑惑很快转变为了恐惧：这是那两振刀的仿作，甚至比那两振刀更为强大。$(br2)更为惊骇的是那刀刃上附着着比不死斩还要深重的妖气，甚至在挥动之时让我也受到了不小的伤害。$(br2)或许真如黑衣人所说：此刃来自于地狱之间，但为什么偏偏是以那两振刀的模样出现在我面前……"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:roukanken_inferno"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:hakurouken_inferno"
+      }
+   ],
+   "advancement":"last_smith:roukan_hakurou",
+   "sortnum" : 5
+}

@@ -1,0 +1,18 @@
+{
+   "name" : "魂樱刀「永贞」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/nagasada/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/nagasada/texture.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.nagasada\"}}",
+   "category" : "last_smith:category_4",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "「永贞」是第一振魂樱刀，算是一种试作品。$(br2)实际上，这振刀在最初确实没有吸引我的地方。硬要说的话，不知为何淬火也不能使其弯曲，甚至比其他刀更为坚韧是它最大的特点。$(br2)直到我听取了其他刀匠的建议来锻造长刀之后，我才意识到魂樱的强大之处……"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:nagasada",
+         "text" : "或许你需要一些魂樱笔记用于锻造时候的参考。"
+      }
+   ],
+   "advancement":"last_smith:blade_sakura",
+   "sortnum" : 1
+}

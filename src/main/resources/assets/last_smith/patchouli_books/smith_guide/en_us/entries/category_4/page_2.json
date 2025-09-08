@@ -1,0 +1,18 @@
+{
+   "name" : "名刀「楔丸」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/sekiro/kusabimaru.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/sekiro/kusabimaru.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.kusabimaru\"}}",
+   "category" : "last_smith:category_4",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "过去曾有长达百年的战乱时期，我也不幸被卷入了战争的洪流当中。$(br2)我曾为德川家的精锐打造过刀剑，同时也跟随着一批人马参与过战斗，后来在苇名地区迷了路，与众人失去了联系。$(br2)在苇名地区，我不仅见识了当地竹刀的伟业，更是见到了一名神奇的忍者……"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:kusabimaru",
+         "text" : "那位忍者是平田家的侍从，但他侍奉的主人早已不在此处。$(br2)与他的交手是一场我至今难以忘记的剑斗，主要原因是他几乎无法被斩杀。$(br2)这把被很好保养着的刀——「楔丸」是他主要的武器。"
+      }
+   ],
+   "advancement":"last_smith:nagasada",
+   "sortnum" : 2
+}

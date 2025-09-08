@@ -1,4 +1,5 @@
 {
+  "creativeGroup": "last_smith:slashblade",
   "enchantments": [
     {
       "id": "minecraft:unbreaking",
@@ -19,7 +20,7 @@
   ],
   "name": "last_smith:fushigiri",
   "properties": {
-    "attack_base": 9.0,
+    "attack_base": 10.0,
     "slash_art": "last_smith:fushigiri",
     "special_effects": [
       "last_smith:fushigiri_se"

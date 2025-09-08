@@ -1,0 +1,18 @@
+{
+   "name" : "魂櫻之寶珠",
+   "icon" : "last_smith:sakura_sphere",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "我效仿着製造耀魂寶珠的過程，將魂櫻鋼錠放置在高爐當中煅燒，結果得到了櫻色的寶珠。$(br2)我將其稱為櫻之寶珠，但很奇怪的是它與耀魂寶珠的特性截然不同。$(br2)很快我就意識到：櫻之寶珠就是純粹到極致的魂靈。"
+      },
+      {
+         "type" : "blasting",
+         "recipe" : "minecraft:sakura_sphere_from_blasting_sakura_steel_ingot",
+         "text" : "將一般的刀劍與櫻之寶珠一同精鍛，甚至可以發現櫻之寶珠的魂靈會反噬刀上的榮耀之魂。$(br2)這會導致刀劍的印記被魂靈侵染，使之成為一振妖刀。$(br2)妖刀橫行的原因，或許就和魂櫻的魂靈有關。"
+      }
+   ],
+   "advancement":"last_smith:root",
+   "sortnum" : 0
+}

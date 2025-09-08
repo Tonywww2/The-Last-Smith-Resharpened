@@ -17,6 +17,6 @@
   },
   "blade": "last_smith:exorcism_yuki",
   "template": {
-    "item": "last_smith:scroll_sakura_blade"
+    "item": "last_smith:scroll_named"
   }
 }

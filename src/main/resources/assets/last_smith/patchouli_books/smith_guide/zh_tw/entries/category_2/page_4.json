@@ -1,0 +1,18 @@
+{
+   "name" : "「銀紙竹光」",
+   "icon" : "slashblade:slashblade_silverbamboo",
+   "category" : "last_smith:category_2",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "竹光刀的完成品，因其製作工藝而被稱為「銀紙竹光」。$(br)利用鐵箔或銀箔等材料，用雞蛋清貼合在刀刃上，再加以塗裝。$(br2)對於那些窮困潦倒的浪人而言，竹光刀是他們為數不多能信賴的刀劍。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:slashblade_silverbamboo",
+         "text" : "外行人很難一眼判斷出葦名地區出產的竹光刀與鋼刀，這也足以證明葦名地區竹光刀技藝的精湛。"
+      }
+   ],
+   "advancement":"last_smith:scrolls",
+   "sortnum" : 3
+}
