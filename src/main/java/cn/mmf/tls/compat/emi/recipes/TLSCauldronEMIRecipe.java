@@ -1,9 +1,7 @@
 package cn.mmf.tls.compat.emi.recipes;
 
-import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.compat.emi.EMICompat;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
-import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
 import net.minecraft.network.chat.Component;

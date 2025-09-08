@@ -113,42 +113,42 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
-}
+    dependencies {
 
-dependencies {
-
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+        minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
 //    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    implementation fg.deobf("cn.mcmod_mmf.mysterious_mountain_lib:MMLib:1.5.22-1.20.1")
-    // Compile against only the API artifact
-    compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1:api"))
-    // Use the full Curios API jar at runtime
-    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1"))
-    
-    implementation fg.deobf("maven.modrinth:slashblade-resharped:${slashblade_version}")
-<<<<<<< HEAD
-    implementation fg.deobf("maven.modrinth:umapyoi:1.10.62-1.20.1")
-    implementation fg.deobf("maven.modrinth:blades-derby:1.0.3")
-    implementation fg.deobf("maven.modrinth:sjap:1.2.15-1.20.1")
-    implementation fg.deobf("maven.modrinth:energyblade:1.1.5-1.20.1")
-=======
-    implementation fg.deobf("maven.modrinth:umapyoi:1.9.58-1.20.1")
->>>>>>> 690fe090931dd0c8f8b481ddec3c26fff0b5e27a
-	implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${project.player_anim}")
-    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-83-FORGE")
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-83-FORGE")
+        implementation fg.deobf("cn.mcmod_mmf.mysterious_mountain_lib:MMLib:1.5.22-1.20.1")
+        // Compile against only the API artifact
+        compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1:api"))
+        // Use the full Curios API jar at runtime
+        runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1"))
 
-    // compile against the JEI API but do not include it at runtime
-    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
-    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
-    // at runtime, use the full JEI jar for Forge
-    runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+        implementation fg.deobf("maven.modrinth:slashblade-resharped:${slashblade_version}")
 
-    compileOnly fg.deobf("dev.emi:emi-forge:${emi_version}:api")
+        implementation fg.deobf("maven.modrinth:sjap:1.2.15-1.20.1")
+        implementation fg.deobf("maven.modrinth:energyblade:1.1.5-1.20.1")
+
+        implementation fg.deobf("maven.modrinth:umapyoi:1.10.62-1.20.1")
+        implementation fg.deobf("maven.modrinth:blades-derby:1.0.3")
+
+        implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${project.player_anim}")
+
+        compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-83-FORGE")
+        runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-83-FORGE")
+
+        // compile against the JEI API but do not include it at runtime
+        compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
+        compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
+        // at runtime, use the full JEI jar for Forge
+        runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+
+        compileOnly fg.deobf("dev.emi:emi-forge:${emi_version}:api")
     runtimeOnly fg.deobf("dev.emi:emi-forge:${emi_version}")
+    }
 }
+
 
 // This block of code expands all declared replace properties in the specified resource targets.
 // A missing property will result in an error. Properties are expanded using ${} Groovy notation.

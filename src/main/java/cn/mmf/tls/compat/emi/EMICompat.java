@@ -38,13 +38,11 @@ public class EMICompat implements EmiPlugin {
         registry.addCategory(RESEARCH_CATEGORY);
         registry.addCategory(CAULDRON_CATEGORY);
 
-        // 注册研究配方
         List<TLSResearchRecipe> researchRecipes = findRecipesByType(RecipeSerializerRegistry.RESEARCH_RECIPE_TYPE.get());
         for (TLSResearchRecipe recipe : researchRecipes) {
             registry.addRecipe(new TLSResearchEMIRecipe(recipe));
         }
 
-        // 注册大锅配方
         registry.addRecipe(new TLSCauldronEMIRecipe(
                 ItemRegistry.BLADE_SAKURA_UNFINISHED_3.get().getDefaultInstance(),
                 ItemRegistry.BLADE_SAKURA_UNFINISHED_4.get().getDefaultInstance(),
@@ -57,7 +55,7 @@ public class EMICompat implements EmiPlugin {
                 TheLastSmith.prefix("cauldron_normal_blade")
         ));
 
-        // 添加工作站
+
         registry.addWorkstation(RESEARCH_CATEGORY, EmiStack.of(ItemRegistry.RESEARCH_TABLE.get()));
         registry.addWorkstation(CAULDRON_CATEGORY, EmiStack.of(Items.CAULDRON));
     }
