@@ -1,10 +1,8 @@
 {
+  "creativeGroup": "last_smith:slashblade",
   "name": "last_smith:nagasada",
   "properties": {
-    "max_damage": 70,
-    "sword_type": [
-      "sealed"
-    ]
+    "max_damage": 100
   },
   "render": {
     "carry_type": "default",

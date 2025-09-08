@@ -12,7 +12,7 @@
           "id": "minecraft:smite"
         }
       ],
-      "kill": 500,
+      "kill": 1000,
       "name": "last_smith:silverbamboo_top",
       "refine": 20
     }

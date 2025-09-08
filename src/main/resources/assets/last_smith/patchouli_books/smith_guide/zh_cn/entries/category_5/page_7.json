@@ -1,0 +1,18 @@
+{
+   "name" : "名刀「将军木」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/sagequoia/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/sagequoia/texture.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.sagequoia\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "曾有一振冠以铁刀之名的木刀，其刃坚韧如钢。$(br2)而在那「铁刀木」之上，则是将木竹发挥至极致的名刀「将军木」$(br2)冠以将军之名的木刀，虽然未被真正的大将带到战场之上，却早已胜过坚韧如钢的铁刀木。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:sagaquoia",
+         "text" : "这便是木竹之极致，所有木刀的顶点。"
+      }
+   ],
+   "advancement":"last_smith:scroll_bamboo",
+   "sortnum" : 7
+}

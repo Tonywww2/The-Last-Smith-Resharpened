@@ -1,0 +1,18 @@
+{
+   "name" : "无铭刀「竹光」",
+   "icon" : "slashblade:slashblade_bamboo",
+   "category" : "last_smith:category_2",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "竹光刀是苇名地区的传统技艺。$(br)因为苇名地区缺少优质的铁矿资源，所以竹刀成为了该地区最常见的刀剑。$(br2)即便是竹也可以有锋利的刃。切裂表皮并不成问题。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "slashblade:slashblade_bamboo",
+         "text" : "尚未完成的竹光刀，但也有一战之力。$(br2)用竹鞘替换木刀原有的木鞘，使得刀更加坚固耐用。$(br2)用涂料和金属箔完成竹光刀的刀装，就可以完成竹光刀的制作。"
+      }
+   ],
+   "advancement":"last_smith:scrolls",
+   "sortnum" : 2
+}

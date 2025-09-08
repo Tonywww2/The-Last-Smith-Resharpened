@@ -1,0 +1,17 @@
+{
+   "name" : "利刀「红玉」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade:model/blade.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"slashblade:model/ruby.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.slashblade.ruby\"}}",
+   "category" : "last_smith:category_3",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "这曾经是一位自称为“玉”的浪人所使用的刀，其刀刃之锋利令人惊叹。因其朱红色的刀柄和浪人的自称而得名「红玉」。$(br2)后来，玉忽然消失在某地，其刀又被一狐妖所持……"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "slashblade:ruby"
+      }
+   ],
+   "advancement":"last_smith:blade",
+   "sortnum" : 1
+}

@@ -128,7 +128,14 @@ dependencies {
     runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1"))
     
     implementation fg.deobf("maven.modrinth:slashblade-resharped:${slashblade_version}")
+<<<<<<< HEAD
+    implementation fg.deobf("maven.modrinth:umapyoi:1.10.62-1.20.1")
+    implementation fg.deobf("maven.modrinth:blades-derby:1.0.3")
+    implementation fg.deobf("maven.modrinth:sjap:1.2.15-1.20.1")
+    implementation fg.deobf("maven.modrinth:energyblade:1.1.5-1.20.1")
+=======
     implementation fg.deobf("maven.modrinth:umapyoi:1.9.58-1.20.1")
+>>>>>>> 690fe090931dd0c8f8b481ddec3c26fff0b5e27a
 	implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${project.player_anim}")
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-83-FORGE")
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-83-FORGE")
@@ -154,6 +161,7 @@ tasks.named('processResources', ProcessResources).configure {
             loader_version_range: loader_version_range,
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
+            slashblade_version_range:slashblade_version_range,
     ]
     inputs.properties replaceProperties
 
@@ -220,7 +228,7 @@ publisher {
     // Modrinth Project ID
     setModrinthID("the-last-smith")
 
-    setVersionType("beta")
+    setVersionType("release")
 
     setChangelog("Changelog WIP...")
 
@@ -250,6 +258,10 @@ publisher {
 
         // Optional dependency
         optional 'the-twilight-forest'
+        
+        optional 'slashblade-hf-blade'
+        
+        optional 'sjap'
     }
 
     modrinthDepends {
@@ -257,6 +269,10 @@ publisher {
         // Optional dependency
         optional 'playeranimator'
         optional 'jei'
+        
+        optional 'sjap'
+        
+        optional 'energyblade'
     }
 
 }

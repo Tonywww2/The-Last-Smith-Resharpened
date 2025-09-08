@@ -1,0 +1,18 @@
+{
+   "name" : "「魂樱之长刀」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/roukan/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/roukan/texture.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.roukanken\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "锻造完「魂樱之短刀」之后，我听取了其他刀匠的意见去锻造一振大太刀。$(br2)然而这振长刀消耗了我和其他刀匠大量的精力和财力，我们在这振刀上意外的倾注了大量的心血，并且这振长刀也以其极致的锋利回应了我们的期待。$(br2)没错，这振「魂樱之长刀」具有斩无不断的神力，能轻易斩下世间万物……"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:roukanken",
+         "text" : "后来，我们将这一长一短的双刀赠送给剑术世家——魂魄家，以感谢他们在这一期间给予的帮助。其家主将其长刀命名为“楼观剑”，将其短刀命名为“白楼剑”。"
+      }
+   ],
+   "advancement":"last_smith:exorcism_sakura",
+   "sortnum" : 2
+}

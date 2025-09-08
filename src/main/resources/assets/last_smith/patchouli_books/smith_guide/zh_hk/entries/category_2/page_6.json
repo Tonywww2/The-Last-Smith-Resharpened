@@ -1,0 +1,46 @@
+{
+   "name" : "榮耀之魂",
+   "icon" : "slashblade:proudsoul",
+   "category" : "last_smith:category_2",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "用刀劍斬殺生靈的時候，刀刃上總會沾染上一絲魂靈。$(br2)經過長久的洗禮，刀劍上的魂靈化作了刀劍自身的榮耀，便是所謂的“榮耀之魂”。$(br2)耀魂會長期附着於刀刃之上，很多消耗靈氣的劍術也會釋放耀魂。"
+      },
+      {
+         "type" : "text",
+         "text" : "當刀刃斷裂之時，耀魂也會隨之脱落。附着耀魂的刀刃碎片，被稱為“耀魂碎片”。$(br2)很多有名的刀匠經常收集並妥善保管着這些碎片，因為利用耀魂鍛造的鋼鐵是近乎完美的刀刃材料。$(br2)當然，這都是魂櫻鋼誕生之前的事情了。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:material/soul",
+         "text" : "斷裂的刀刃會根據耀魂的量產生破碎的耀魂碎片，但數量也是有限的。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:material/tiny",
+         "recipe2" : "slashblade:material/ingot"
+      },
+      {
+         "type" : "smelting",
+         "recipe" : "slashblade:material/sphere_smelting",
+         "text" : "除了熔鍊出耀魂寶珠，使用耀魂鐵錠敲擊帶有刀劍的刀掛台，可以獲得該刀持有的斬技。"
+      },
+      {
+         "type" : "blasting",
+         "recipe" : "slashblade:material/crystal_blasting",
+         "text" : "再用高爐進一步煅燒耀魂結晶，可以得到更進一步的耀魂結晶。"
+      },
+      {
+         "type" : "blasting",
+         "recipe" : "slashblade:material/trapezohedron_blasting",
+         "text" : "耀魂結晶經過高爐的淬鍊，會變化為一種獨特的耀魂結晶體。這種具有獨特形體的耀魂，被稱為耀偏方三八面魂。$(br2)它以消耗刀內耀魂為代價，讓刀劍得以突破極限，從而無止盡得精煉下去。"
+      },
+      {
+         "type" : "text",
+         "text" : "除去榮耀之魂，還有一種附着靈氣的櫻花瓣也可以用於鍛刀與精鍛，這就是所謂的“魂櫻”。比較微妙的是，魂櫻和耀魂的性質並不一致。"
+      }
+   ],
+   "advancement":"last_smith:root",
+   "sortnum" : 4
+}

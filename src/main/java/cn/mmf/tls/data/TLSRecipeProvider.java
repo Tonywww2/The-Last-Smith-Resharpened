@@ -5,11 +5,14 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 import cn.mcmod_mmf.mmlib.data.AbstractRecipeProvider;
+import cn.mmf.energyblade.Energyblade;
+import cn.mmf.slashblade_addon.data.SlashBladeAddonBuiltInRegistry;
 import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.block.BlockRegistry;
 import cn.mmf.tls.data.builtin.TLSSlashBladeRegistry;
 import cn.mmf.tls.data.tag.TLSItemTags;
 import cn.mmf.tls.item.ItemRegistry;
+import cn.mmf.tls.item.ScrollItem;
 import cn.mmf.tls.recipe.TLSResearchRecipeBuilder;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.data.builtin.SlashBladeBuiltInRegistry;
@@ -17,6 +20,7 @@ import mods.flammpfeil.slashblade.init.SBItems;
 import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.recipe.RequestDefinition;
 import mods.flammpfeil.slashblade.recipe.SlashBladeIngredient;
+import mods.flammpfeil.slashblade.recipe.SlashBladeShapedRecipeBuilder;
 import mods.flammpfeil.slashblade.recipe.SlashBladeSmithingRecipeBuilder;
 import mods.flammpfeil.slashblade.registry.slashblade.EnchantmentDefinition;
 import net.minecraft.data.PackOutput;
@@ -27,13 +31,18 @@ import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.CompoundIngredient;
+import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class TLSRecipeProvider extends AbstractRecipeProvider {
 
@@ -142,9 +151,42 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		vanillaSlashBladeRecipes(consumer);
 		tlsSlashBladeRecipes(consumer);
 		researchRecipes(consumer);
+		sjapRecipes(consumer);
 	}
 
 	private void tlsSlashBladeRecipes(Consumer<FinishedRecipe> consumer) {
+        SlashBladeShapedRecipeBuilder.shaped(TLSSlashBladeRegistry.EIEVUI.location())
+        .pattern("LIL")
+        .pattern("IBI")
+        .pattern("LIL")
+        .define('B', SBItems.slashblade_white)
+        .define('L', Ingredient.of(Items.DANDELION))
+        .define('I', Ingredient.of(ItemRegistry.SAKURA.get()))
+        .unlockedBy(getHasName(SBItems.slashblade_white), has(SBItems.slashblade_white)).save(consumer);
+        
+        SlashBladeShapedRecipeBuilder.shaped(TLSSlashBladeRegistry.SWEAPON.location())
+        .pattern("LI ")
+        .pattern("LI ")
+        .pattern(" B ")
+        .define('B', Items.IRON_SWORD)
+        .define('L', Ingredient.of(Tags.Items.STORAGE_BLOCKS_LAPIS))
+        .define('I', Ingredient.of(Tags.Items.INGOTS_IRON))
+        .unlockedBy(getHasName(Items.IRON_SWORD), has(Items.IRON_SWORD)).save(consumer);
+        
+		SlashBladeSmithingRecipeBuilder.smithing(
+				Ingredient.of(ItemRegistry.SCROLL_NAMED.get()), 
+				SlashBladeIngredient.of(
+                        RequestDefinition.Builder.newInstance()
+                        .build()),  
+				SlashBladeIngredient.of(
+                        RequestDefinition.Builder.newInstance()
+                        .name(TLSSlashBladeRegistry.SWEAPON.location())
+                        .build()), 
+				RecipeCategory.COMBAT, 
+				TLSSlashBladeRegistry.SLASHBLADE.location())
+		.unlocks(getHasName(ItemRegistry.SCROLL_NAMED.get()), has(ItemRegistry.SCROLL_NAMED.get()))
+		.save(consumer, TheLastSmith.prefix("old_slashblade"));
+		
 		SlashBladeSmithingRecipeBuilder.smithing(
 				Ingredient.of(ItemRegistry.SCROLL_WOOD_KIWAMI.get()), 
 				SlashBladeIngredient.of(
@@ -158,8 +200,26 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.unlocks(getHasName(ItemRegistry.SCROLL_WOOD_KIWAMI.get()), has(ItemRegistry.SCROLL_WOOD_KIWAMI.get()))
 		.save(consumer, TheLastSmith.prefix("sagaquoia"));
 		
+		whenModLoaded(SlashBladeSmithingRecipeBuilder.smithing(
+				Ingredient.of(ItemRegistry.SCROLL_SHARPNESS.get()), 
+				SlashBladeIngredient.of(
+						RequestDefinition.Builder.newInstance()
+                        .name(TLSSlashBladeRegistry.ROUKANKEN.location())
+                        .refineCount(10)
+                        .build()),
+				SlashBladeIngredient.of(
+						Energyblade.FORGE_ENERGY_BLADE.get(),
+						RequestDefinition.Builder.newInstance()
+                        .name(cn.mmf.energyblade.data.BuiltInSlashBladeRegistry.HF_BLADE.location())
+                        .build()),
+				RecipeCategory.COMBAT, 
+				TLSSlashBladeRegistry.BUNSHI.location())
+		.unlocks(getHasName(ItemRegistry.SCROLL_SHARPNESS.get()), has(ItemRegistry.SCROLL_SHARPNESS.get())), 
+		"energyblade",  TheLastSmith.prefix("bunshi"))
+		.build(consumer,  TheLastSmith.prefix("bunshi"));
+		
 		SlashBladeSmithingRecipeBuilder.smithing(
-				Ingredient.of(ItemRegistry.SCROLL_SAKURA_FULL.get()), 
+				Ingredient.of(ItemRegistry.SCROLL_STAR.get()), 
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(SlashBladeBuiltInRegistry.YAMATO.location())
@@ -176,7 +236,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.BAMBOO_TOP.location())
-                        .killCount(100).refineCount(10)
+                        .proudSoul(1000).refineCount(10)
                         .addEnchantment(new EnchantmentDefinition(
                                 getEnchantmentID(Enchantments.SOUL_SPEED), 1))
                         .build()),  
@@ -191,7 +251,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.SILVERBAMBOO_TOP.location())
-                        .killCount(500).refineCount(20)
+                        .killCount(1000).refineCount(20)
                         .addEnchantment(new EnchantmentDefinition(
                                 getEnchantmentID(Enchantments.SMITE), 1))
                         .build()),  
@@ -206,7 +266,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.SILVERBAMBOO_TOP.location())
-                        .killCount(500).refineCount(20)
+                        .killCount(1000).refineCount(20)
                         .addEnchantment(new EnchantmentDefinition(
                                 getEnchantmentID(Enchantments.SHARPNESS), 1))
                         .build()),  
@@ -224,7 +284,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.NAMELESS_ODACHI.location())
-                        .killCount(500).refineCount(10)
+                        .killCount(1000).refineCount(10)
                         .addEnchantment(new EnchantmentDefinition(
                                 getEnchantmentID(Enchantments.SHARPNESS), 1))
                         .addEnchantment(new EnchantmentDefinition(
@@ -298,7 +358,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.save(consumer, TheLastSmith.prefix("silverbamboo_top"));
 		
 		SlashBladeSmithingRecipeBuilder.smithing(
-				Ingredient.of(ItemRegistry.SCROLL_KATANA.get()), 
+				Ingredient.of(ItemRegistry.SCROLL_NAMED.get()), 
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.NAGASADA.location())
@@ -311,7 +371,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.save(consumer, TheLastSmith.prefix("kusabimaru"));
 		
 		SlashBladeSmithingRecipeBuilder.smithing(
-				Ingredient.of(ItemRegistry.SCROLL_SAKURA_BLADE.get()), 
+				Ingredient.of(ItemRegistry.SCROLL_NAMED.get()), 
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.NAGASADA.location())
@@ -325,7 +385,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.save(consumer, TheLastSmith.prefix("exorcism_sakura"));
 		
 		SlashBladeSmithingRecipeBuilder.smithing(
-				Ingredient.of(ItemRegistry.SCROLL_SAKURA_BLADE.get()), 
+				Ingredient.of(ItemRegistry.SCROLL_NAMED.get()), 
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.NAGASADA.location())
@@ -339,7 +399,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.save(consumer, TheLastSmith.prefix("exorcism_ginkgo"));
 		
 		SlashBladeSmithingRecipeBuilder.smithing(
-				Ingredient.of(ItemRegistry.SCROLL_SAKURA_BLADE.get()), 
+				Ingredient.of(ItemRegistry.SCROLL_NAMED.get()), 
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.NAGASADA.location())
@@ -422,9 +482,9 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.ROUKANKEN.location())
-                        .killCount(1000).addEnchantment(new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 1))
+                        .killCount(1500).proudSoul(5000).addEnchantment(new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 1))
                         .build()), 
-				Ingredient.of(Tags.Items.INGOTS_NETHERITE), 
+				Ingredient.of(Tags.Items.STORAGE_BLOCKS_NETHERITE), 
 				RecipeCategory.COMBAT, 
 				TLSSlashBladeRegistry.ROUKANKEN_NETHER.location())
 		.unlocks(getHasName(ItemRegistry.SCROLL_BLOOD.get()), has(ItemRegistry.SCROLL_BLOOD.get()))
@@ -448,9 +508,9 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.HAKUROUKEN.location())
-                        .killCount(1000).addEnchantment(new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT),1))
+                        .killCount(1500).proudSoul(5000).addEnchantment(new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT),1))
                         .build()), 
-				Ingredient.of(Tags.Items.INGOTS_NETHERITE), 
+				Ingredient.of(Tags.Items.STORAGE_BLOCKS_NETHERITE), 
 				RecipeCategory.COMBAT, 
 				TLSSlashBladeRegistry.HAKUROUKEN_NETHER.location())
 		.unlocks(getHasName(ItemRegistry.SCROLL_BLOOD.get()), has(ItemRegistry.SCROLL_BLOOD.get()))
@@ -470,7 +530,7 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.save(consumer, TheLastSmith.prefix("amagumo_munin"));
 		
 		SlashBladeSmithingRecipeBuilder.smithing(
-				Ingredient.of(ItemRegistry.SCROLL_GOD.get()), 
+				Ingredient.of(ItemRegistry.SCROLL_SHARPNESS.get()), 
 				SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                         .name(TLSSlashBladeRegistry.NAGASADA.location())
@@ -494,11 +554,58 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				TLSSlashBladeRegistry.AMAGUMO_KUMO.location())
 		.unlocks(getHasName(ItemRegistry.SCROLL_BEWITCHED.get()), has(ItemRegistry.SCROLL_BEWITCHED.get()))
 		.save(consumer, TheLastSmith.prefix("amagumo_kumo"));
+		
+		SlashBladeShapedRecipeBuilder.shaped(TLSSlashBladeRegistry.OBORO_MURAMASA.location())
+		.pattern("DFD")
+		.pattern("CSU")
+		.pattern("DFD")
+		.define('S', ItemRegistry.SCROLL_MURAMASA.get())
+		.define('F', ItemRegistry.SAKURA_FULL.get())
+		.define('D', SBItems.proudsoul_sphere)
+		.define('C',
+				SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
+						.name(TLSSlashBladeRegistry.MURAMASA_KAGURA.location()).killCount(1500).proudSoul(5000).refineCount(20).build()))
+		.define('U',
+				SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
+						.name(SlashBladeBuiltInRegistry.MURAMASA.location()).killCount(1500).proudSoul(5000).refineCount(20).build()))
+		.unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
 	}
 
     private static ResourceLocation getEnchantmentID(Enchantment enchantment) {
         return ForgeRegistries.ENCHANTMENTS.getKey(enchantment);
     }
+    
+    private void sjapRecipes(Consumer<FinishedRecipe> consumer) {
+		whenModLoaded(SlashBladeSmithingRecipeBuilder.smithing(
+				Ingredient.of(ItemRegistry.SCROLL_KATANA.get()), 
+				SlashBladeIngredient.of(RequestDefinition.Builder.newInstance().build()), 
+				Ingredient.of(Tags.Items.DYES_BLUE), 
+				RecipeCategory.COMBAT, 
+				SlashBladeAddonBuiltInRegistry.BLUE.location())
+		.unlocks(getHasName(ItemRegistry.SCROLL_KATANA.get()), has(ItemRegistry.SCROLL_KATANA.get())), 
+		"slashblade_addon", new ResourceLocation("slashblade_addon", "blue"))
+		.build(consumer, new ResourceLocation("slashblade_addon", "blue"));
+		
+		whenModLoaded(SlashBladeSmithingRecipeBuilder.smithing(
+				Ingredient.of(ItemRegistry.SCROLL_KATANA.get()), 
+				SlashBladeIngredient.of(RequestDefinition.Builder.newInstance().build()), 
+				Ingredient.of(Tags.Items.DYES_RED), 
+				RecipeCategory.COMBAT, 
+				SlashBladeAddonBuiltInRegistry.KATANA.location())
+		.unlocks(getHasName(ItemRegistry.SCROLL_KATANA.get()), has(ItemRegistry.SCROLL_KATANA.get())), 
+		"slashblade_addon", new ResourceLocation("slashblade_addon", "katana"))
+		.build(consumer, new ResourceLocation("slashblade_addon", "katana"));
+		
+		whenModLoaded(SlashBladeSmithingRecipeBuilder.smithing(
+				Ingredient.of(ItemRegistry.SCROLL_KATANA.get()), 
+				SlashBladeIngredient.of(RequestDefinition.Builder.newInstance().build()), 
+				Ingredient.of(Tags.Items.DYES_YELLOW), 
+				RecipeCategory.COMBAT, 
+				SlashBladeAddonBuiltInRegistry.TACHI.location())
+		.unlocks(getHasName(ItemRegistry.SCROLL_KATANA.get()), has(ItemRegistry.SCROLL_KATANA.get())), 
+		"slashblade_addon", new ResourceLocation("slashblade_addon", "tachi"))
+		.build(consumer, new ResourceLocation("slashblade_addon", "tachi"));
+	}
 
 	private void vanillaSlashBladeRecipes(Consumer<FinishedRecipe> consumer) {
 		SlashBladeSmithingRecipeBuilder.smithing(
@@ -538,6 +645,15 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				SlashBlade.prefix("slashblade"))
 		.unlocks(getHasName(SBItems.slashblade_white), has(SBItems.slashblade_white))
 		.save(consumer, TheLastSmith.prefix("slashblade_from_bamboolight"));
+		
+		SlashBladeSmithingRecipeBuilder.smithing(
+				Ingredient.of(ItemRegistry.SCROLL_KATANA.get()), 
+				SlashBladeIngredient.of(RequestDefinition.Builder.newInstance().build()), 
+				Ingredient.of(ItemRegistry.SAKURA.get()), 
+				RecipeCategory.COMBAT, 
+				SlashBladeBuiltInRegistry.RUBY.location())
+		.unlocks(getHasName(ItemRegistry.SCROLL_KATANA.get()), has(ItemRegistry.SCROLL_KATANA.get()))
+		.save(consumer, SlashBladeBuiltInRegistry.RUBY.location());
 	}
 
 	private void researchRecipes(Consumer<FinishedRecipe> consumer) {
@@ -593,6 +709,24 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 				)	
 		.unlocks(getHasName(ItemRegistry.SCROLL_BLADE.get()), has(ItemRegistry.SCROLL_BLADE.get()))
 		.save(consumer, TheLastSmith.prefix("research/scroll_muramasa_from_kagura"));
+		
+		TLSResearchRecipeBuilder.researching(
+				SlashBladeIngredient.of(
+						TLSSlashBladeRegistry.OBORO_MURAMASA.location()), 
+				ItemRegistry.SCROLL_CAUSALITY.get()
+				)	
+		.unlocks(getHasName(ItemRegistry.SCROLL_MURAMASA.get()), has(ItemRegistry.SCROLL_MURAMASA.get()))
+		.save(consumer, TheLastSmith.prefix("research/scroll_oboro_muramasa"));
+		
+		TLSResearchRecipeBuilder.researching(
+				Ingredient.of(ItemRegistry.SCROLL_GOD.get()), 
+				Ingredient.of(ItemRegistry.SCROLL_CAUSALITY.get()), 
+				Ingredient.of(Tags.Items.DYES_BLACK),  
+				RecipeCategory.MISC, 
+				ItemRegistry.SCROLL_SHARPNESS.get().getDefaultInstance()
+				)	
+		.unlocks(getHasName(ItemRegistry.SCROLL_CAUSALITY.get()), has(ItemRegistry.SCROLL_CAUSALITY.get()))
+		.save(consumer, TheLastSmith.prefix("research/scroll_sharpness"));
 		
 		TLSResearchRecipeBuilder.researching(
 				Ingredient.of(ItemRegistry.SCROLL_KATANA.get()), 
@@ -716,12 +850,23 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.unlocks(getHasName(ItemRegistry.SCROLL_BLOOD.get()), has(ItemRegistry.SCROLL_BLOOD.get()))
 		.save(consumer, TheLastSmith.prefix("research/scroll_inferno_hakurouken"));
 		
-		TLSResearchRecipeBuilder.researching(
+		whenModLoaded(TLSResearchRecipeBuilder.researching(
 				SlashBladeIngredient.of(
-						TLSSlashBladeRegistry.GOLDENBAMBOO.location()), 
+						SlashBladeAddonBuiltInRegistry.NIHILBX.location()), 
+				ItemRegistry.SCROLL_HEIL.get()
+				)	
+		.unlocks(getHasName(ItemRegistry.SCROLL_BLOOD.get()), has(ItemRegistry.SCROLL_BLOOD.get())), 
+		"slashblade_addon", "research/scroll_inferno_nihilbx")
+		.build(consumer, TheLastSmith.MODID, "research/scroll_inferno_nihilbx")
+		;
+		
+		TLSResearchRecipeBuilder.researching(
+				CompoundIngredient.of(
+						SlashBladeIngredient.of(TLSSlashBladeRegistry.GOLDENBAMBOO.location())
+						),
 				ItemRegistry.SCROLL_GOD.get()
 				)	
-		.unlocks(getHasName(ItemRegistry.SCROLL_WOOD_BASIC.get()), has(ItemRegistry.SCROLL_WOOD_BASIC.get()))
+		.unlocks(getHasName(ItemRegistry.SCROLL_NAMED.get()), has(ItemRegistry.SCROLL_NAMED.get()))
 		.save(consumer, TheLastSmith.prefix("research/scroll_god"));
 		
 		TLSResearchRecipeBuilder.researching(
@@ -768,7 +913,83 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.unlocks(getHasName(ItemRegistry.SCROLL_KATANA.get()), has(ItemRegistry.SCROLL_KATANA.get()))
 		.save(consumer, TheLastSmith.prefix("research/scroll_star"));
 		
+		whenModLoaded(TLSResearchRecipeBuilder.researching(
+				CompoundIngredient.of(
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.SNOW_CROW.location()),
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.MURAKUMO.location()),
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.DARK_RAVEN.location())
+						)
+				, 
+				ItemRegistry.SCROLL_STAR.get()
+				)	
+		.unlocks(getHasName(ItemRegistry.SCROLL_KATANA.get()), has(ItemRegistry.SCROLL_KATANA.get())), 
+		"slashblade_addon", "research/scroll_star_sjap")
+		.build(consumer, TheLastSmith.MODID, "research/scroll_star_sjap");
 		
+		TLSResearchRecipeBuilder.researching(
+				CompoundIngredient.of(
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.DOUTANUKI.location()),
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.RUBY.location()),
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.TUKUMO.location()),
+						
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.RODAI_WOODEN.location()),
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.RODAI_STONE.location()),
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.RODAI_IRON.location()),
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.RODAI_GOLDEN.location()),
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.RODAI_DIAMOND.location()),
+						SlashBladeIngredient.of(SlashBladeBuiltInRegistry.RODAI_NETHERITE.location())
+						)
+				, 
+				ItemRegistry.SCROLL_NAMED.get()
+				)	
+		.unlocks(getHasName(ItemRegistry.SCROLL_BLADE.get()), has(ItemRegistry.SCROLL_BLADE.get()))
+		.save(consumer, TheLastSmith.prefix("research/scroll_named"));
+		
+		whenModLoaded(TLSResearchRecipeBuilder.researching(
+				CompoundIngredient.of(
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.BLUE.location()),
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.WANDERER.location()),
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.TBOEN.location()),
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.KATANA.location()),
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.TACHI.location()),
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.FROST_WOLF.location()),
+						SlashBladeIngredient.of(SlashBladeAddonBuiltInRegistry.FROSTY_CHERRY.location())
+						)
+				, 
+				ItemRegistry.SCROLL_NAMED.get()
+				)	
+		.unlocks(getHasName(ItemRegistry.SCROLL_BLADE.get()), has(ItemRegistry.SCROLL_BLADE.get())), 
+		"slashblade_addon", "research/scroll_named_sjap")
+		.build(consumer, TheLastSmith.MODID, "research/scroll_named_sjap");
+		
+    	ItemRegistry.ITEMS.getEntries().forEach(ro->{
+    		if(ro.get() instanceof ScrollItem && ro.get().getRarity(ro.get().getDefaultInstance()) != Rarity.EPIC)
+    			researchCopy(ro, consumer);
+    	});
+	}
+	
+	private void researchCopy(RegistryObject<Item> research, Consumer<FinishedRecipe> consumer) {
+		TLSResearchRecipeBuilder.researching(
+				Ingredient.of(research.get())
+				, 
+				new ItemStack(research.get(), 2)
+				)	
+		.unlocks(getHasName(ItemRegistry.SCROLL_KATANA.get()), has(ItemRegistry.SCROLL_KATANA.get()))
+		.save(consumer, TheLastSmith.prefix("research/")+research.getId().getPath()+"_copy");
 	}
 
+    public ConditionalRecipe.Builder whenModLoaded(TLSResearchRecipeBuilder recipe, String modid, String path) {
+        return ConditionalRecipe.builder().addCondition(modLoaded(modid))
+                .addRecipe(consumer -> recipe.save(consumer, TheLastSmith.prefix(path)));
+    }
+    
+    public ConditionalRecipe.Builder whenModLoaded(SlashBladeSmithingRecipeBuilder recipe, String modid, String path) {
+        return ConditionalRecipe.builder().addCondition(modLoaded(modid))
+                .addRecipe(consumer -> recipe.save(consumer, TheLastSmith.prefix(path)));
+    }
+    
+    public ConditionalRecipe.Builder whenModLoaded(SlashBladeSmithingRecipeBuilder recipe, String modid, ResourceLocation loc) {
+        return ConditionalRecipe.builder().addCondition(modLoaded(modid))
+                .addRecipe(consumer -> recipe.save(consumer, loc));
+    }
 }

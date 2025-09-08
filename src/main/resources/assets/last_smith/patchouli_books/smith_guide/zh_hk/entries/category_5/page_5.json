@@ -1,0 +1,18 @@
+{
+   "name" : "「不死斬」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/sekiro/fushigiri.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/sekiro/fushigiri.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.fushigiri\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "那名平田家的侍從還揹着一振看起來已經年久失修的大太刀，但刀上妖氣之濃厚引起了我的警覺。$(br2)在他拔出這振大太刀之時，妖氣瞬間爆發出來，我只得迅速拉開距離避其鋒芒。$(br2)據傳有一櫻龍降臨於世，後又被一腥紅刀刃所傷……或許就是這振大太刀的力量。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:fushigiri",
+         "text" : "人類是無法拔出這振刀的，因為拔出此刃便必死無疑。這忍者到底為何能輕鬆駕馭這振妖刀……$(br2)從那振刀下活着逃出來，是一件比想象中更難做到的事情。而我很快也因為被逼出真身而直接離開了葦名地區，就連「永貞」也永遠遺失在那裏了。"
+      }
+   ],
+   "advancement":"last_smith:scroll_muramasa",
+   "sortnum" : 4
+}

@@ -1,0 +1,26 @@
+{
+   "name" : "千子村正",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade:model/named/muramasa/muramasa.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"slashblade:model/named/muramasa/muramasa.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.slashblade.muramasa\"}}",
+   "category" : "last_smith:category_4",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "千子村正是一名很有才華的刀匠，但他過於追求極致，以至於死後仍因為其執念而無法成佛。$(br2)在我完成「魂櫻之長刀」之後，他便執迷於魂櫻之力，鍛造着一振又一振充滿着妖氣的妖刀。$(br2)據傳，他甚至在成為怨靈之後仍鍛造了上百振妖刀，但那些妖刀卻不知去向了。"
+      },
+      {
+         "type" : "text",
+         "text" : "我不知道當時是否他受到了我的影響，不過真要論對力量的痴迷，或許我比他更甚。$(br2)但他鍛造的刀劍之多，刀劍之精確實為他的刀劍帶來了所謂“妖刀村正”的名聲。$(br2)不過那也是在外界的名聲了，而我在外面一直只是一個默默無聞的無名之輩，沒有人會叫出我的名字。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:muramasa"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:muramasa_chizuki",
+         "recipe2" : "last_smith:muramasa_kagura"
+      }
+   ],
+   "advancement":"last_smith:scroll_muramasa",
+   "sortnum" : 4
+}

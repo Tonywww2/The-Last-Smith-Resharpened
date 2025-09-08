@@ -1,0 +1,18 @@
+{
+   "name" : "魂樱之宝珠",
+   "icon" : "last_smith:sakura_sphere",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "我效仿着制造耀魂宝珠的过程，将魂樱钢锭放置在高炉当中煅烧，结果得到了樱色的宝珠。$(br2)我将其称为樱之宝珠，但很奇怪的是它与耀魂宝珠的特性截然不同。$(br2)很快我就意识到：樱之宝珠就是纯粹到极致的魂灵。"
+      },
+      {
+         "type" : "blasting",
+         "recipe" : "minecraft:sakura_sphere_from_blasting_sakura_steel_ingot",
+         "text" : "将一般的刀剑与樱之宝珠一同精锻，甚至可以发现樱之宝珠的魂灵会反噬刀上的荣耀之魂。$(br2)这会导致刀剑的印记被魂灵侵染，使之成为一振妖刀。$(br2)妖刀横行的原因，或许就和魂樱的魂灵有关。"
+      }
+   ],
+   "advancement":"last_smith:root",
+   "sortnum" : 0
+}

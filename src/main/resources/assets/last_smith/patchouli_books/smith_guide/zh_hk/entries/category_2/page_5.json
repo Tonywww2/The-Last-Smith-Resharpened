@@ -1,0 +1,18 @@
+{
+   "name" : "利刀「白鞘」",
+   "icon" : "slashblade:slashblade_white",
+   "category" : "last_smith:category_2",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "鍛造一柄鋼刀並非易事：需要精心挑選鋼材，再經過千錘百煉，還要細心研磨與雕琢才能製成一支堅韌的刀條。$(br2)你應該已經通過木刀的製作瞭解到刀劍的基本構造，只需要將原來的木刀條替換成鐵刀條就得到了一柄白鞘。但我仍然建議你先留一份基本的筆記在手邊。"
+      },
+      {
+         "type" : "patchouli:spotlight",
+         "item" : "last_smith:blade",
+         "text" : "最基礎的鋼鐵刀條$(br2)一支刀條需要經過鍛打、覆土、淬火、研磨與金飾的步驟才能真正完成。$(br2)一支刀條需要耗費大量時間和精力才能完成。"
+      }
+   ],
+   "advancement":"last_smith:scrolls",
+   "sortnum" : 4
+}

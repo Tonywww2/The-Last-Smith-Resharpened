@@ -1,0 +1,18 @@
+{
+   "name" : "「魂樱之短刀」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/hakurou/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/hakurou/texture.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.hakurouken\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "「永贞」让我意识到魂樱钢极其坚韧的特点，我便尝试用魂樱钢锻造一柄难以朽坏的短刀。$(br2)这柄短刀仿佛汇聚了太多的灵力，但我直到完成之前都不敢确定这一点。在试斩开始时，似乎就是因为这短刀浓厚的灵力导致吸引来了恶灵，$(br2)令我一时没有反应过来的是：短刀出鞘的那一刹那，恶灵便被短刀所超度了。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:hakurouken",
+         "text" : "毫无疑问，这柄短刀具有超度灵魂的力量，但试斩却不尽人意。$(br2)或许是这钢刃也有些难以研磨，导致实际上得到了一柄钝刀吧。"
+      }
+   ],
+   "advancement":"last_smith:exorcism_sakura",
+   "sortnum" : 1
+}

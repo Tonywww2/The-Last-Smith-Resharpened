@@ -3,11 +3,13 @@ package cn.mmf.tls.data.tag;
 import java.util.concurrent.CompletableFuture;
 
 import cn.mmf.tls.item.ItemRegistry;
+import cn.mmf.tls.item.ScrollItem;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.tracen.umapyoi.Umapyoi;
@@ -23,14 +25,19 @@ public class TLSItemTagsProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider lookup) {
     	tag(TLSItemTags.BAMBOO).add(Items.BAMBOO);
     	tag(TLSItemTags.LEAVES_CHERRY).add(Items.CHERRY_LEAVES).addOptional(new ResourceLocation("sakura", "sakuraleaves"));
-    	tag(TLSItemTags.RESEARCH_CONSUMABLE)
-    	.add(
-    			ItemRegistry.SCROLL_TENGU_VOL1.get(), 
-    			ItemRegistry.SCROLL_TENGU_VOL2.get(), 
-    			ItemRegistry.SCROLL_KATANA.get(), 
-    			ItemRegistry.SAKURA_FULL.get(), 
-    			ItemRegistry.SCROLL_STAR.get()
-    		);
+    	
+    	ItemRegistry.ITEMS.getEntries().forEach(ro->{
+    		if(ro.get() instanceof ScrollItem)
+    			tag(TLSItemTags.SCROLL).add(ro.get());
+    		var rarity = ro.get().getDefaultInstance().getRarity();
+    		if(rarity == Rarity.RARE)
+    			tag(TLSItemTags.SCROLL_RARE).add(ro.get());
+      		if(rarity == Rarity.EPIC)
+    			tag(TLSItemTags.SCROLL_EPIC).add(ro.get());
+    	});
+    	tag(TLSItemTags.PROUD_SOULS).add(ItemRegistry.SAKURA.get()).add(ItemRegistry.SAKURA_FULL.get());
+    	tag(TLSItemTags.RESEARCH_CONSUMABLE).add(ItemRegistry.SAKURA_FULL.get()).addTag(TLSItemTags.SCROLL);
+
     }
 
 }

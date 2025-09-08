@@ -1,0 +1,18 @@
+{
+   "name" : "寶刀「付喪」結月",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade:model/named/agito.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"slashblade:model/named/a_tukumo.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.slashblade.yuzukitukumo\"}}",
+   "category" : "last_smith:category_3",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "結月家的家傳寶刀。在某個島嶼處被結月家家主發現。$(br2)據傳被心存邪念之人持有就會邪化為神佛惡鬼一刀兩斷的妖刀；被心如止水之人持有就會化為退治邪靈的靈刀。$(br2)但以這刀的靈氣來看，只不過是又一振稍有靈氣的妖刀而已。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:yuzukitukumo",
+         "text" : "那附着火焰的利刃，與火焰一同起舞……"
+      }
+   ],
+   "advancement":"last_smith:blade",
+   "sortnum" : 4
+}

@@ -1,0 +1,36 @@
+{
+   "name" : "「驅魔之刃」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/sakura/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/sakura/texture.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.exorcism_sakura\"}}",
+   "category" : "last_smith:category_4",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "德川家康平定天下，成為了新的徵夷大將軍，徹底結束了上百年的戰亂。和平與安定理應到來。$(br2)然而好景不長，由於妖刀問世等原因，江户周邊乃至江户城內都被濃厚的妖氣所籠罩。$(br2)很快，江户城周邊的一座村莊就被邪魔所吞噬了……"
+      },
+      {
+         "type" : "text",
+         "text" : "村莊被吞噬的原因很簡單：傳説中的驅魔劍世家居住在那，世代守護着斬殺邪魔的利刃。$(br2)第二代櫻之刃主——美影是那場悲劇當中唯一倖存下來的人，年輕的劍士跨越了重重阻礙，並親手擊殺了最兇惡的邪魔——修羅。$(br2)可惜的是她很快就死於非命，並且眾人為她告別之時，不知為何引發了一場史無前例的火災……"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:exorcism_sakura",
+         "recipe2" : "last_smith:exorcism_ginkgo"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:exorcism_yuki",
+         "recipe2" : "last_smith:evil_kataware"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:evil_shura",
+         "text" : "那之後的事情大家都知道了，就是那一場直接吞噬了江户城的明歷大火。很快，為了重建江户，大量男性紛紛上京加入到建設的隊伍當中。$(br2)而那振修羅之刃不知去向何處……"
+      },
+      {
+         "type" : "text",
+         "text" : "所謂驅魔之刃也只是魂櫻之力的作用。純粹的守護使其成為了面對邪魔也無所畏懼的利刃。$(br2)那三振驅魔之刃便是我鍛造「魂櫻之雙刀」之後對魂櫻力量的運用。$(br2)那兩振邪魔之刃，似乎是千子村正的失敗作……"
+      }
+   ],
+   "advancement":"last_smith:nagasada",
+   "sortnum" : 3
+}

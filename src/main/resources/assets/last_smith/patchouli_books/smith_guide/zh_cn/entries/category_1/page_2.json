@@ -1,0 +1,20 @@
+{
+   "name" : "致谢名单",
+   "icon" : "last_smith:scroll_basic",
+   "category" : "last_smith:category_1",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "《最后的太刀匠人》是史上第一个有着完整世界观、有着完整的发展线路、有着大量致敬元素、有着不少游戏性改进的大型拔刀剑附属。$(br2)本模组由妖怪之山锻刀铺小组为您献上。"
+      },
+      {
+         "type" : "text",
+         "text" : "小组成员：$(br)程序开发：射命丸政$(br)策划：射命丸政，樱风华乐$(br)剧情设计：射命丸政$(br)美术制作：射命丸政、樱风华乐，萧琥璃GF$(br2)本地化支持：射命丸政，NoNamePlay"
+      },
+      {
+         "type" : "text",
+         "text" : "若有任何反馈意见，请利用 GitHub 的 Issue 功能提交反馈，或者加入我们的玩家群。$(br)TLS玩家群： $(l:https://qm.qq.com/q/W6Wmjfljs4)815607372$()。"
+      }
+   ],
+   "sortnum" : 1
+}

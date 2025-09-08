@@ -1,0 +1,18 @@
+{
+   "name" : "天云「残云」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade:model/named/agito.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/smith/texture_cloud.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.amagumo_kumo\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "现在来看，当时的决定有些过于杞人忧天了。毕竟那些妖刀的力量或许撼动不了我们的地位。$(br2)但当时年轻气盛的我还是感受到了恐惧，并决定为自己的族群锻造守护的利刃。$(br2)但实际上我们本就足够强大，足以抵御来犯之敌。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:amagumo_kaze",
+         "text" : "天云「残云」便是第二振天云剑，我父亲的佩剑。$(br2)偶尔能看到他携带着这振刀参加一些重大场合，但他对我成为刀匠这件事一直以来都有些不满。"
+      }
+   ],
+   "advancement":"last_smith:bewitched",
+   "sortnum" : 9
+}

@@ -5,6 +5,7 @@ import com.mojang.logging.LogUtils;
 import cn.mmf.tls.block.BlockRegistry;
 import cn.mmf.tls.combo.ComboStateRegistry;
 import cn.mmf.tls.enchantments.EnchantmentsRegistry;
+import cn.mmf.tls.event.HFBladeEventsHandler;
 import cn.mmf.tls.item.ItemRegistry;
 import cn.mmf.tls.menus.ContainerRegistry;
 import cn.mmf.tls.recipe.RecipeSerializerRegistry;
@@ -12,7 +13,9 @@ import cn.mmf.tls.se.TLSSpecialEffectRegistry;
 import cn.mmf.tls.slasharts.TLSSlashArtsRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -27,7 +30,7 @@ public class TheLastSmith {
 
 	public TheLastSmith() {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		
+
 		ItemRegistry.ITEMS.register(modEventBus);
 		BlockRegistry.BLOCKS.register(modEventBus);
 		TLSCreativeGroup.CREATIVE_MODE_TABS.register(modEventBus);
@@ -38,6 +41,14 @@ public class TheLastSmith {
 		ComboStateRegistry.COMBO_STATE.register(modEventBus);
 		TLSSlashArtsRegistry.SLASH_ARTS.register(modEventBus);
 		TLSSpecialEffectRegistry.SPECIAL_EFFECT.register(modEventBus);
+		
+		modEventBus.addListener(this::setup);
+	}
+	
+	private void setup(final FMLCommonSetupEvent event) {
+		if(ModList.get().isLoaded("energyblade")) {
+			HFBladeEventsHandler.INSTANCE.init();
+		}
 	}
 
 	public static Logger getLogger() {

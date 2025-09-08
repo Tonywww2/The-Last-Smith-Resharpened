@@ -1,0 +1,30 @@
+{
+   "name" : "「閻魔刀」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/yamato_neo/yamato_neo.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/yamato_neo/yamato_neo.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.slashblade.yamato_neo\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "魔族在世間也曾肆虐過這片土地，甚至有一段時間他們與我等天狗是敵對的。$(br2)而很快，一名魔劍士手持着魔劍「閻魔刀」斬殺了這裏的魔族，然後離開了這裏。$(br2)那彷彿能斬開空間的利刃確確實實震撼到了我們這些久居於此地的刀匠們。"
+      },
+      {
+         "type" : "text",
+         "text" : "那名魔劍士不知為何又踏上了這片土地，而那振「閻魔刀」也變了模樣。$(br2)令人恐懼的是，他這次真正斬開了空間，然後再一次離開了此處。$(br2)我或許永遠也不知道那振魔劍的真實力量，然而他帶來的似乎不只是那振閻魔刀……"
+      },
+      {
+         "type" : "entity",
+         "entity" : "ender_dragon",
+         "text" : "末影龍曾守護着這振魔劍，但實際上守護的是一振破碎的刀。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:yamato_fix"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:yamato_full"
+      }
+   ],
+   "advancement":"last_smith:scrolls_sakura_full",
+   "sortnum" : 4
+}

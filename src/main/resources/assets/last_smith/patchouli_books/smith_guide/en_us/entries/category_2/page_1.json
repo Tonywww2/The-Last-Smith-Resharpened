@@ -1,0 +1,17 @@
+{
+   "name" : "无铭刀「木偶」",
+   "icon" : "slashblade:slashblade_wood",
+   "category" : "last_smith:category_2",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "木刀制作起来最为简单，但却包含了诸多刀剑制作的基础内容。例如如何为刀条制作基本的白鞘。$(br2)对于很多新人刀匠而言，木刀是他们生涯当中的第一振刀。"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade:slashblade_wood",
+         "text" : "木刀非常容易折断，不适合用于战斗。$(br2)但是注意保养，也可以作为临时护身的好用具。"
+      }
+   ],
+   "sortnum" : 0
+}

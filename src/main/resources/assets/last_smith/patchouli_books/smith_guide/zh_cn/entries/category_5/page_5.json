@@ -1,0 +1,18 @@
+{
+   "name" : "「不死斩」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/sekiro/fushigiri.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/sekiro/fushigiri.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.fushigiri\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "那名平田家的侍从还背着一振看起来已经年久失修的大太刀，但刀上妖气之浓厚引起了我的警觉。$(br2)在他拔出这振大太刀之时，妖气瞬间爆发出来，我只得迅速拉开距离避其锋芒。$(br2)据传有一樱龙降临于世，后又被一腥红刀刃所伤……或许就是这振大太刀的力量。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:fushigiri",
+         "text" : "人类是无法拔出这振刀的，因为拔出此刃便必死无疑。这忍者到底为何能轻松驾驭这振妖刀……$(br2)从那振刀下活着逃出来，是一件比想象中更难做到的事情。而我很快也因为被逼出真身而直接离开了苇名地区，就连「永贞」也永远遗失在那里了。"
+      }
+   ],
+   "advancement":"last_smith:scroll_muramasa",
+   "sortnum" : 4
+}

@@ -31,11 +31,85 @@ public class TLSLangProvider extends AbstractLangProvider {
 		add("emi.category.last_smith.research", "Researching");
 		add("emi.category.last_smith.cauldron", "Cauldron Quenching");
 
+
+		add("guide.smith_guide.title", "The Way of Bewitched Blade");
+		add("guide.smith_guide.landing_text", "This book records many ancient stories...");
+		add("guide.smith_guide.subtitle", "The Bewitched Power and The Extreme Sharpness.");
+
 		add("container.last_smith.research.error_tooltip", "Can't do any research this way");
 		add("container.last_smith.research.missing_blade_tooltip", "Add the blade or research");
 		add("container.last_smith.research.missing_paper_tooltip", "Add papers or research");
 		add("container.last_smith.research.missing_ink_tooltip", "Add ink");
 		
+		addAdvTitle("last_smith.root", "Swordsmith's Story");
+		addAdvDesc("last_smith.root", "Start the story by crafting Anonymity -Wood-.");
+
+		addAdvTitle("last_smith.research_table", "Research the Slashblade");
+		addAdvDesc("last_smith.research_table", "Craft a research table for researching.");
+
+		addAdvTitle("last_smith.scrolls", "Historical Scroll");
+		addAdvDesc("last_smith.scrolls", "Finish a research and get the scroll.");
+
+		addAdvTitle("last_smith.blade", "First Iron Blade");
+		addAdvDesc("last_smith.blade", "Finish a Iron Blade.");
+
+		addAdvTitle("last_smith.blade_sakura", "Sprite Sakura Blade");
+		addAdvDesc("last_smith.blade_sakura", "Finish a Sakura Blade Blade.");
+
+		addAdvTitle("last_smith.scrolls_sakura_full", "The Full Research of Sprite Sakura");
+		addAdvDesc("last_smith.scrolls_sakura_full", "Got the scroll that contains all things about sprite sakura.");
+
+		addAdvTitle("last_smith.scroll_named", "Stories of Named Blades");
+		addAdvDesc("last_smith.scroll_named", "Find named blades and their stories.");
+
+		addAdvTitle("last_smith.scroll_muramasa", "Muramasa");
+		addAdvDesc("last_smith.scroll_muramasa", "Find the stories of muramasa.");
+
+		addAdvTitle("last_smith.oboro_muramasa", "The Hazy Causality");
+		addAdvDesc("last_smith.oboro_muramasa", "Get the Oboro Muramasa.");
+
+		addAdvTitle("last_smith.meteorn", "The Meteorn");
+		addAdvDesc("last_smith.meteorn", "Find the stories of The Meteorn.");
+
+		addAdvTitle("last_smith.yamato", "The Yamato");
+		addAdvDesc("last_smith.yamato", "Get the awaked yamato.");
+
+		addAdvTitle("last_smith.sharpness", "Extreme Sharpness");
+		addAdvDesc("last_smith.sharpness", "Find the Story of The Extreme Sharpness.");
+
+		addAdvTitle("last_smith.scroll_bamboo", "Bamboo Light");
+		addAdvDesc("last_smith.scroll_bamboo", "Get the top of bamboo blades.");
+
+		addAdvTitle("last_smith.nagasada", "Nagasada");
+		addAdvDesc("last_smith.nagasada", "Get the Nagasada.");
+
+		addAdvTitle("last_smith.odachi", "Odachi");
+		addAdvDesc("last_smith.odachi", "Craft a odachi.");
+
+		addAdvTitle("last_smith.fushigiri", "Fushigiri");
+		addAdvDesc("last_smith.fushigiri", "Find the mortal blade Fushigiri.");
+
+		addAdvTitle("last_smith.exorcism_sakura", "The Exorcism Blade");
+		addAdvDesc("last_smith.exorcism_sakura", "Find the exorcism blades.");
+
+		addAdvTitle("last_smith.shura", "Shura");
+		addAdvDesc("last_smith.shura", "Get the shura's blade.");
+
+		addAdvTitle("last_smith.roukan_hakurou", "Twin Spirit Blades");
+		addAdvDesc("last_smith.roukan_hakurou", "Find the Roukanken or the Hakurouken.");
+
+		addAdvTitle("last_smith.inferno", "The Inferno");
+		addAdvDesc("last_smith.inferno", "Get the inferno blades.");
+
+		addAdvTitle("last_smith.bewitched", "The Bewitched Power");
+		addAdvDesc("last_smith.bewitched", "Find the stories of the bewitched power.");
+
+		addAdvTitle("last_smith.munin", "The Last Smith");
+		addAdvDesc("last_smith.munin", "Find the Amagumo -Munin-.");
+
+		addAdvTitle("last_smith.sagequoia", "The Ultimate Wood");
+		addAdvDesc("last_smith.sagequoia", "Find the Sagequoia.");
+
 		addBlock(BlockRegistry.RESEARCH_TABLE, "Researching Table");
 		
 		addSlashBlade(TLSSlashBladeRegistry.AMAGUMO_KAZE, "Amagumo -Kaze-");
@@ -65,12 +139,18 @@ public class TLSLangProvider extends AbstractLangProvider {
 		
 		addSlashBlade(TLSSlashBladeRegistry.SAGEQUOIA, "Named -Sagequoia-");
 		
+		addSlashBlade(TLSSlashBladeRegistry.OBORO_MURAMASA, "-Oboro Muramasa-");
+
 		addSlashBlade(TLSSlashBladeRegistry.BAMBOO_TOP, "Top -Bamboo Light-");
 		addSlashBlade(TLSSlashBladeRegistry.BAMBOO_HERMIT, "The Hermit's Bamboo Light");
 		addSlashBlade(TLSSlashBladeRegistry.GOLDENBAMBOO, "Noted -Golden Bamboo Light-");
 		addSlashBlade(TLSSlashBladeRegistry.SILVERBAMBOO_TOP, "Top -Silver Bamboo Light-");
 		addSlashBlade(TLSSlashBladeRegistry.SILVERBAMBOO_BLOOD, "-Bloody Bamboo Light-");
 		
+		addSlashBlade(TLSSlashBladeRegistry.SWEAPON, "SWeapon--");
+		addSlashBlade(TLSSlashBladeRegistry.SLASHBLADE, "SlashBlade--");
+		addSlashBlade(TLSSlashBladeRegistry.EIEVUI, "-Eievui-");
+
 		add("slash_art.last_smith.transmigration_slash", "Transmigration Slash");
 		add("slash_art.last_smith.fushigiri", "Mortal Draw");
 		add("slash_art.last_smith.iai_cross", "Ashina Cross");
@@ -78,6 +158,8 @@ public class TLSLangProvider extends AbstractLangProvider {
 		
 		addEnchantment(EnchantmentsRegistry.SPIRIT_SLASH, "Spirit Slash");
 		
+		addEnchantment(EnchantmentsRegistry.SPIRIT_ABSORPTION, "Spirit Absorption");
+
 		addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId(), "Spirit Power");
 		addSpecialEffect(TLSSpecialEffectRegistry.BEWITCHED_POWER.getId(), "Bewitched Power");
 		addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SHARPNESS.getId(), "Spirit Sharpness");
@@ -109,6 +191,7 @@ public class TLSLangProvider extends AbstractLangProvider {
         addItem(ItemRegistry.SCROLL_WOOD_BASIC, "Note of Bamboo Blade");
         addItem(ItemRegistry.SCROLL_BLADE, "Note of Iron Blade");
         addItem(ItemRegistry.SCROLL_WOOD_KIWAMI, "Story of The Ultimate Wood");
+        addItem(ItemRegistry.SCROLL_NAMED, "Stories of Named Blades");
         addItem(ItemRegistry.SCROLL_SAKURA, "Note of Sprite Sakura");
         addItem(ItemRegistry.SCROLL_SAKURA_BLADE, "Note of Sprite Blade");
         addItem(ItemRegistry.SCROLL_SAKURA_FULL, "The Full Research of Sprite Sakura");
@@ -121,7 +204,9 @@ public class TLSLangProvider extends AbstractLangProvider {
         addItem(ItemRegistry.SCROLL_GOD, "Story of The God's Blade");
         addItem(ItemRegistry.SCROLL_BLOOD, "Story of The Blood Blade");
         addItem(ItemRegistry.SCROLL_YAMATO, "Story of The Yamato");
+        addItem(ItemRegistry.SCROLL_CAUSALITY, "Story of The Hazy Causality");
         addItem(ItemRegistry.SCROLL_MORTAL, "Story of The Mortal Blade");
+        addItem(ItemRegistry.SCROLL_SHARPNESS, "Story of The Extreme Sharpness");
         addItem(ItemRegistry.SCROLL_BEWITCHED, "Story of The Bewitched Power");
         addItem(ItemRegistry.SCROLL_HEIL, "Story of The Inferno Blade");
         addItem(ItemRegistry.SCROLL_TENGU_VOL1, "History of Tengu Vol.1");

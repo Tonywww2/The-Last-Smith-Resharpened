@@ -1,4 +1,5 @@
 {
+  "creativeGroup": "last_smith:slashblade",
   "enchantments": [
     {
       "id": "minecraft:smite",
@@ -18,7 +19,7 @@
     ]
   },
   "render": {
-    "carry_type": "default",
+    "carry_type": "ninja",
     "model": "last_smith:model/named/sakura/model.obj",
     "summon_sword_color": 16768306,
     "texture": "last_smith:model/named/sakura/texture_1.png"

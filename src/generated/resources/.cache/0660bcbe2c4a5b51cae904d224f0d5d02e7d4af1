@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-01T01:01:36.911414	Item Models: last_smith
+// 1.20.1	2025-08-18T03:52:21.1675028	Item Models: last_smith
 c17247898e879274bee84caa0aaa06a64949f3b0 assets/last_smith/models/item/blade.json
 f1938c4d4a3355d34776ca1439762b81e9a87b6a assets/last_smith/models/item/blade_sakura.json
 f920560cb86897dfe39ba256625d9377b6c1e766 assets/last_smith/models/item/blade_sakura_unfinished_1.json
@@ -18,16 +18,19 @@ b7f78342ac08961204597dc6a220da0fa1148388 assets/last_smith/models/item/sakura_sp
 be12298899f74c10729a73e44da5f61f4089c20c assets/last_smith/models/item/scroll_bewitched.json
 0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_blade.json
 be12298899f74c10729a73e44da5f61f4089c20c assets/last_smith/models/item/scroll_blood.json
+0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_causality.json
 0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_exorcism.json
 0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_god.json
 be12298899f74c10729a73e44da5f61f4089c20c assets/last_smith/models/item/scroll_heil.json
 0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_katana.json
 be12298899f74c10729a73e44da5f61f4089c20c assets/last_smith/models/item/scroll_mortal.json
 0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_muramasa.json
+a038d0a811d8475b0225a53471d1b86e07e0b50d assets/last_smith/models/item/scroll_named.json
 a038d0a811d8475b0225a53471d1b86e07e0b50d assets/last_smith/models/item/scroll_odachi.json
 0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_sakura.json
 0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_sakura_blade.json
 a038d0a811d8475b0225a53471d1b86e07e0b50d assets/last_smith/models/item/scroll_sakura_full.json
+be12298899f74c10729a73e44da5f61f4089c20c assets/last_smith/models/item/scroll_sharpness.json
 be12298899f74c10729a73e44da5f61f4089c20c assets/last_smith/models/item/scroll_shura.json
 0dd6b2e73ee9b5f5ffaa579a4be58fbab61ec3a0 assets/last_smith/models/item/scroll_star.json
 a038d0a811d8475b0225a53471d1b86e07e0b50d assets/last_smith/models/item/scroll_tengu_full.json

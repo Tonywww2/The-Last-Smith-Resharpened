@@ -1,0 +1,18 @@
+{
+   "name" : "天云「速风」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/smith/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/smith/texture_wind.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.amagumo_kaze\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "我等天狗早在千年之前就降临在这片土地之上，被世人所信仰而得到了神力。在大天狗的带领之下，我们在崇山峻岭之中生活着。$(br2)尽管身为鸦天狗的我不应该成为一名刀匠，但「魂樱之双刀」成就了我，使我被大天狗承认为天狗当中极为少数的刀匠。$(br2)从各地周游回到山中之后，我便开始了天云剑的锻造。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:amagumo_kaze",
+         "text" : "天云「速风」便是第一振天云剑，我母亲的佩剑。$(br2)她一直将这振刀收藏在家中，一直到今天也是如此。"
+      }
+   ],
+   "advancement":"last_smith:sharpness",
+   "sortnum" : 8
+}
