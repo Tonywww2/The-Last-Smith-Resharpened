@@ -66,7 +66,8 @@ minecraft {
 
         data {
             workingDirectory project.file('run-data')
-
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
     }
@@ -262,6 +263,8 @@ publisher {
         optional 'slashblade-hf-blade'
         
         optional 'sjap'
+        
+        optional 'patchouli'
     }
 
     modrinthDepends {
@@ -273,6 +276,8 @@ publisher {
         optional 'sjap'
         
         optional 'energyblade'
+        
+        optional 'patchouli'
     }
 
 }

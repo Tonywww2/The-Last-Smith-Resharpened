@@ -20,16 +20,13 @@ import org.joml.Vector3f;
 
 @EventBusSubscriber
 public class SectumsempraSE extends SpecialEffect {
-    static final Vector3f COLOR_WHITE = new Vector3f(1f, 1f, 1f);
-    static final Vector3f COLOR_GREY = new Vector3f(0.25f, 0.25f, 0.25f);
-    static final DustParticleOptions PARTICLE_WHITE = new DustParticleOptions(COLOR_WHITE, 0.35F);
-    static final DustParticleOptions PARTICLE_GREY = new DustParticleOptions(COLOR_GREY, 0.5F);
+    private static final Vector3f COLOR_WHITE = new Vector3f(1f, 1f, 1f);
+    private static final Vector3f COLOR_GREY = new Vector3f(0.25f, 0.25f, 0.25f);
+    private static final DustParticleOptions PARTICLE_WHITE = new DustParticleOptions(COLOR_WHITE, 0.35F);
+    private static final DustParticleOptions PARTICLE_GREY = new DustParticleOptions(COLOR_GREY, 0.5F);
 
-    private final int seLevel;
-
-    public SectumsempraSE(int seLevel, int requestLevel, boolean isCopiable, boolean isRemovable) {
+    public SectumsempraSE(int requestLevel, boolean isCopiable, boolean isRemovable) {
         super(requestLevel, isCopiable, isRemovable);
-        this.seLevel = seLevel;
     }
 
     @SubscribeEvent

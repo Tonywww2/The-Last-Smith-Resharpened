@@ -31,6 +31,6 @@ public class TLSSpecialEffectRegistry {
     		() -> new FushigiriSE(3, 30, false, false));
 
 	public static final RegistryObject<SectumsempraSE> SECTUMSEMPRA_SE = SPECIAL_EFFECT.register("sectumsempra_se",
-    		() -> new SectumsempraSE(3, 40, false, false));
+    		() -> new SectumsempraSE(40, false, false));
     
 }

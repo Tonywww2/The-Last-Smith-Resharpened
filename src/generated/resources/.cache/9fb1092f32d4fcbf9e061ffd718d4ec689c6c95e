@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-07T20:06:51.628906	Recipes
+// 1.20.1	2025-09-10T16:50:50.9658493	Recipes
 1ac2c260eeab9d635ca7ab7699183ffef2749be8 data/last_smith/advancements/recipes/combat/amagumo_kaze.json
 0df802702edfd2032d14e802cc562e114c644a3c data/last_smith/advancements/recipes/combat/amagumo_kumo.json
 b61ba079907d2f60ee99ebad8ea0395195e80544 data/last_smith/advancements/recipes/combat/amagumo_munin.json
@@ -196,5 +196,8 @@ e32051ca601b03ec75fc8df25b538bf5d373bb73 data/slashblade/advancements/recipes/co
 960d170decb94df4100bfaeaa18327c0863dc9bc data/slashblade/recipes/slashblade_bamboo.json
 b6ed1f3e18a232ae002ccf339cf4e91791b7a11b data/slashblade/recipes/slashblade_white.json
 786837aa80b4911f5737e256bb2cdd6df1219ae8 data/slashblade_addon/recipes/blue.json
+9d0e234fac71dd8c405845828eae98ac6f971006 data/slashblade_addon/recipes/crimsoncherry.json
 43a52c051618503e6afe41b66db695d901b5ee10 data/slashblade_addon/recipes/katana.json
+110736321759e92d87483d305323914e8a5010f1 data/slashblade_addon/recipes/nihilbx.json
+051274a4b20ea28781d50434af6941e189a17e80 data/slashblade_addon/recipes/nihilul.json
 25d89ae3cc19921a43c6f43bda2d06ea0f508712 data/slashblade_addon/recipes/tachi.json

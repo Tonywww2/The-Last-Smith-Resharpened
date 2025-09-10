@@ -1,0 +1,36 @@
+{
+   "name" : "煉獄刀「死念」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"slashblade_addon:model/nihil/nihil.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"slashblade_addon:model/nihil/nihil_bx.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.slashblade_addon.nihil_bx\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "有一振妖刀是我從未真正見過的，那就是「似蛭」。$(br2)據説這是一振邪惡至極的妖刀，曾有一浪人手持似蛭犯下無數惡行。$(br2)此人手中還曾有一振名為「紅櫻」的利刃，但也下落不明。"
+      },
+      {
+         "type" : "text",
+         "text" : "但我曾經斬殺過一名手持腥紅色妖刀的惡鬼，他二話不説便向我衝來。$(br2)雖然他的劍術水平不佳，但是他的那振妖刀似乎很像眾人曾説的「似蛭」。或許我親手斬殺了那名罪惡滔天的浪人也説不定，也正是因為他罪惡滔天才會化為惡鬼吧……"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade_addon:nihil",
+         "recipe2" : "slashblade_addon:nihilex"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade_addon:nihilul",
+         "recipe2" : "slashblade_addon:crimsoncherry"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "slashblade_addon:nihilbx"
+      },
+      {
+         "type" : "text",
+         "text" : "那振刀有點像是從地獄當中誕生的妖刀。$(br2)我不知是它自煉獄之中誕生，還是它製造了煉獄。但無論如何，我將其命名為煉獄刀「死念」。"
+      }
+   ],
+   "advancement":"last_smith:scrolls_sakura_full",
+   "flag":"mod:slashblade_addon",
+   "sortnum" : 4
+}

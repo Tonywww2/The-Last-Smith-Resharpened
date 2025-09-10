@@ -43,7 +43,7 @@ public class DataGen {
         dataGenerator.addProvider(event.includeClient(), new TLSItemModelProvider(packOutput, existingFileHelper));
         
         dataGenerator.addProvider(event.includeServer(),
-                new DatapackBuiltinEntriesProvider(packOutput, lookupProvider, bladeBuilder, Set.of(TheLastSmith.MODID)) {
+                new DatapackBuiltinEntriesProvider(packOutput, lookupProvider, bladeBuilder, Set.of(TheLastSmith.MODID, "slashblade_addon")) {
 
                     @Override
                     public String getName() {

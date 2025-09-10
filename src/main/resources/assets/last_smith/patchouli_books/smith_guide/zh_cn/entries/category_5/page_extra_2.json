@@ -1,0 +1,19 @@
+{
+   "name" : "「文始」",
+   "icon" : "slashblade:slashblade{bladeState:{AttackAmplifier:0.0f,ComboRoot:\"slashblade:standby\",Damage:0,ModelName:\"last_smith:model/named/rf_roukan/model.obj\",RepairCounter:0,SpecialAttackType:\"slashblade:judgement_cut\",StandbyRenderType:1b,SummonedSwordColor:-13421569,SummonedSwordColorInverse:0b,TargetEntity:0,TextureName:\"last_smith:model/named/rf_roukan/texture_on.png\",_onClick:0b,adjustXYZ:[0.0d,0.0d,0.0d],baseAttackModifier:5.0f,currentCombo:\"slashblade:none\",fallDecreaseRate:0.0f,isBroken:0b,isDefaultBewitched:0b,isSealed:0b,killCount:0,lastActionTime:0L,maxDamage:45,proudSoul:0,translationKey:\"item.last_smith.bunshi\"}}",
+   "category" : "last_smith:category_5",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "这振刀曾经是河童手里收藏着的一振魂樱长刀的仿作。不过在无念那件事过去之后，河童们找上我来，希望一起合作对这振刀“加装一些特别的东西”。$(br2)这是通过河童的技术将刀附上一层“激光”，以此更高效的斩断物体$(br2)对技术的好奇心以及后来与河童的交流，让我再一次期望走出结界。"
+      },
+      {
+         "type" : "smithing",
+         "recipe" : "last_smith:bunshi",
+         "text" : "「文始」之名，其实起源于「楼观」。$(br2)但也代表着所谓“文明开化之起始”的寓意在。$(br2)至少，河童们相信着科技会带来所谓的文明。"
+      }
+   ],
+   "advancement":"last_smith:roukan_hakurou",
+   "flag":"mod:energy_blade",
+   "sortnum" : 4
+}

@@ -13,6 +13,6 @@
          "text" : "将一般的刀剑与樱之宝珠一同精锻，甚至可以发现樱之宝珠的魂灵会反噬刀上的荣耀之魂。$(br2)这会导致刀剑的印记被魂灵侵染，使之成为一振妖刀。$(br2)妖刀横行的原因，或许就和魂樱的魂灵有关。"
       }
    ],
-   "advancement":"last_smith:root",
+   "advancement":"last_smith:scrolls_sakura_full",
    "sortnum" : 0
 }

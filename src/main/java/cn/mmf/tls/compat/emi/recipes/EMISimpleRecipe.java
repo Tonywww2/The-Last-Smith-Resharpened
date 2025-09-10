@@ -1,13 +1,9 @@
 package cn.mmf.tls.compat.emi.recipes;
 
 import dev.emi.emi.api.recipe.EmiRecipe;
-import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
-import dev.emi.emi.api.widget.WidgetHolder;
 import net.minecraft.resources.ResourceLocation;
-import org.jetbrains.annotations.Nullable;
-
 import java.util.List;
 
 public abstract class EMISimpleRecipe implements EmiRecipe {

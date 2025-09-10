@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-07T20:04:54.8200226	TLS SlashBlade Definition Registry
+// 1.20.1	2025-09-10T16:57:22.6110314	TLS SlashBlade Definition Registry
 50cd1aa99d4d187756b21b17ae6202cb7ce9dbe4 data/last_smith/slashblade/named_blades/amagumo_kaze.json
 865c36f4814202c6875b0fb553acccbc1e0eb9dc data/last_smith/slashblade/named_blades/amagumo_kumo.json
 c7f9ed0dd925537b369fc96bf68da4bc6ddf2224 data/last_smith/slashblade/named_blades/amagumo_munin.json
@@ -29,3 +29,6 @@ cc6f05a81b5b40ff5889ed792d6a843b7213ba84 data/last_smith/slashblade/named_blades
 78b3de8c0e8a254a98a9ecdb9b77930f6865e5d7 data/last_smith/slashblade/named_blades/slashblade.json
 25caa8c212c5de39da3a3b60f56c6413ab23163e data/last_smith/slashblade/named_blades/sweapon.json
 8f6ea9abbc230c4194449559ef4ce40c4e2c828b data/last_smith/slashblade/named_blades/yamato_neo.json
+4bf7546f83665fe364235f79f0d7fb7156bb961e data/slashblade_addon/slashblade/named_blades/crimsoncherry.json
+08cd75ab94b8fd51b0e60c66fe7a49fff24af810 data/slashblade_addon/slashblade/named_blades/nihilbx.json
+854b7d39dbce1df2954c3fc3992449097e1e8897 data/slashblade_addon/slashblade/named_blades/nihilul.json

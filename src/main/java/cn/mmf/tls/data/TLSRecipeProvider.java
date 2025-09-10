@@ -605,6 +605,58 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
 		.unlocks(getHasName(ItemRegistry.SCROLL_KATANA.get()), has(ItemRegistry.SCROLL_KATANA.get())), 
 		"slashblade_addon", new ResourceLocation("slashblade_addon", "tachi"))
 		.build(consumer, new ResourceLocation("slashblade_addon", "tachi"));
+		whenModLoaded(
+				SlashBladeShapedRecipeBuilder.shaped(TLSSlashBladeRegistry.NIHILUL.location()).pattern("SNS")
+				.pattern("DBD").pattern("SYS").define('S', SlashBladeIngredient.of(RequestDefinition.Builder.newInstance().build()) )
+				.define('Y',
+						SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
+								.name(SlashBladeBuiltInRegistry.YAMATO.location()).build()))
+				.define('N', Items.NETHER_STAR).define('D', Items.DIAMOND_BLOCK)
+				.define('B',
+						SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
+								.name(SlashBladeAddonBuiltInRegistry.NIHILEX.location()).killCount(750).proudSoul(6000)
+								.refineCount(3).build()))
+				.unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)),
+				"slashblade_addon", new ResourceLocation("slashblade_addon", "nihilul")
+				)
+		.build(consumer, new ResourceLocation("slashblade_addon", "nihilul"));
+		
+		whenModLoaded(
+				SlashBladeShapedRecipeBuilder.shaped(TLSSlashBladeRegistry.CRIMSONCHERRY.location()).pattern("DUD")
+				.pattern("DED").pattern("DDD")
+				.define('E',
+						SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
+								.name(SlashBladeAddonBuiltInRegistry.NIHIL.location()).build()))
+				.define('D', Items.DIAMOND_BLOCK)
+				.define('U',
+						SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
+								.name(SlashBladeAddonBuiltInRegistry.NIHILEX.location()).killCount(750).proudSoul(6000)
+								.refineCount(3).build()))
+				.unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)),
+				"slashblade_addon", new ResourceLocation("slashblade_addon", "crimsoncherry")
+				)
+		.build(consumer, new ResourceLocation("slashblade_addon", "crimsoncherry"));
+		
+		whenModLoaded(
+				SlashBladeShapedRecipeBuilder.shaped(TLSSlashBladeRegistry.NIHILBX.location())
+				.pattern("DAD")
+				.pattern("CSU")
+				.pattern("DAD")
+				.define('S', SlashBladeIngredient.of(RequestDefinition.Builder.newInstance().build()) )
+				.define('D', Items.DIAMOND_BLOCK)
+				.define('A', ItemRegistry.SAKURA_SPHERE.get())
+				.define('C',
+						SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
+								.name(SlashBladeAddonBuiltInRegistry.CRIMSONCHERRY.location()).killCount(1500)
+								.proudSoul(10000).refineCount(10).build()))
+				.define('U',
+						SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
+								.name(SlashBladeAddonBuiltInRegistry.NIHILUL.location()).killCount(1500).proudSoul(10000)
+								.refineCount(10).build()))
+				.unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)),
+				"slashblade_addon", new ResourceLocation("slashblade_addon", "nihilbx")
+				)
+		.build(consumer, new ResourceLocation("slashblade_addon", "nihilbx"));
 	}
 
 	private void vanillaSlashBladeRecipes(Consumer<FinishedRecipe> consumer) {
@@ -989,6 +1041,11 @@ public class TLSRecipeProvider extends AbstractRecipeProvider {
     }
     
     public ConditionalRecipe.Builder whenModLoaded(SlashBladeSmithingRecipeBuilder recipe, String modid, ResourceLocation loc) {
+        return ConditionalRecipe.builder().addCondition(modLoaded(modid))
+                .addRecipe(consumer -> recipe.save(consumer, loc));
+    }
+    
+    public ConditionalRecipe.Builder whenModLoaded(SlashBladeShapedRecipeBuilder recipe, String modid, ResourceLocation loc) {
         return ConditionalRecipe.builder().addCondition(modLoaded(modid))
                 .addRecipe(consumer -> recipe.save(consumer, loc));
     }

@@ -51,6 +51,8 @@
   "container.last_smith.research.missing_blade_tooltip": "Add the blade or research",
   "container.last_smith.research.missing_ink_tooltip": "Add ink",
   "container.last_smith.research.missing_paper_tooltip": "Add papers or research",
+  "emi.category.last_smith.cauldron": "Cauldron Quenching",
+  "emi.category.last_smith.research": "Researching",
   "enchantment.last_smith.spirit_absorption": "Spirit Absorption",
   "enchantment.last_smith.spirit_slash": "Spirit Slash",
   "guide.smith_guide.landing_text": "This book records many ancient stories...",

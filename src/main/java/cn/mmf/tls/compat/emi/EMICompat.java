@@ -12,7 +12,6 @@ import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -60,7 +59,8 @@ public class EMICompat implements EmiPlugin {
         registry.addWorkstation(CAULDRON_CATEGORY, EmiStack.of(Items.CAULDRON));
     }
 
-    private static <C extends Container, T extends Recipe<C>> List<T> findRecipesByType(RecipeType<T> type) {
-        return Minecraft.getInstance().level.getRecipeManager().getAllRecipesFor(type);
+	private static <C extends Container, T extends Recipe<C>> List<T> findRecipesByType(RecipeType<T> type) {
+        Minecraft instance = Minecraft.getInstance();
+		return instance.level.getRecipeManager().getAllRecipesFor(type);
     }
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.commons.compress.utils.Lists;
 
 import cn.mmf.energyblade.Energyblade;
+import cn.mmf.slashblade_addon.SlashBladeAddon;
 import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.se.TLSSpecialEffectRegistry;
 import cn.mmf.tls.slasharts.TLSSlashArtsRegistry;
@@ -68,6 +69,10 @@ public class TLSSlashBladeRegistry {
     public static final ResourceKey<SlashBladeDefinition> SLASHBLADE = register("slashblade");
     
     public static final ResourceKey<SlashBladeDefinition> EIEVUI = register("eievui");
+    
+    public static final ResourceKey<SlashBladeDefinition> NIHILBX = registerSJAP("nihilbx");
+    public static final ResourceKey<SlashBladeDefinition> NIHILUL = registerSJAP("nihilul");
+    public static final ResourceKey<SlashBladeDefinition> CRIMSONCHERRY = registerSJAP("crimsoncherry");
     
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
     	
@@ -610,6 +615,67 @@ public class TLSSlashBladeRegistry {
                 		),
                         TheLastSmith.prefix("slashblade")
                 ));
+    	
+        bootstrap.register(NIHILUL,
+            new SlashBladeDefinition(SlashBladeAddon.prefix("nihilul"),
+                 RenderDefinition.Builder.newInstance()
+                 .textureName(SlashBladeAddon.prefix("model/nihil/nihilul.png"))
+                 .modelName(SlashBladeAddon.prefix("model/nihil/nihil.obj"))
+                 .standbyRenderType(CarryType.KATANA)
+                 .build(),
+                 PropertiesDefinition.Builder.newInstance()
+                 .baseAttackModifier(12.0F)
+                 .maxDamage(70)
+                 .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SHARPNESS.getId())
+                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                 .defaultSwordType(List.of(SwordType.BEWITCHED)).build(),
+                 List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.BANE_OF_ARTHROPODS), 2),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 2),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 3))));
+
+         bootstrap.register(CRIMSONCHERRY,
+            new SlashBladeDefinition(SlashBladeAddon.prefix("crimsoncherry"),
+                 RenderDefinition.Builder.newInstance()
+                 .textureName(SlashBladeAddon.prefix("model/nihil/crimsoncherry.png"))
+                 .modelName(SlashBladeAddon.prefix("model/nihil/nihil.obj"))
+                 .standbyRenderType(CarryType.KATANA)
+                 .build(),
+                 PropertiesDefinition.Builder.newInstance()
+                 .baseAttackModifier(11.0F)
+                 .maxDamage(65)
+                 .addSpecialEffect(TLSSpecialEffectRegistry.SMITE_SE.getId())
+                 .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                 .defaultSwordType(List.of(SwordType.BEWITCHED)).build(),
+                 List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.BANE_OF_ARTHROPODS), 3),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 2))));
+
+         bootstrap.register(NIHILBX,
+            new SlashBladeDefinition(SlashBladeAddon.prefix("nihilbx"),
+                 RenderDefinition.Builder.newInstance()
+                 .textureName(SlashBladeAddon.prefix("model/nihil/nihil_bx.png"))
+                 .modelName(SlashBladeAddon.prefix("model/nihil/nihil.obj"))
+                 .standbyRenderType(CarryType.KATANA)
+                 .build(),
+                 PropertiesDefinition.Builder.newInstance()
+                 .baseAttackModifier(14.0F)
+                 .maxDamage(240)
+                 .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_SHARPNESS.getId())
+                 .addSpecialEffect(TLSSpecialEffectRegistry.SMITE_SE.getId())
+                 .addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId())
+                 .addSpecialEffect(SpecialEffectsRegistry.WITHER_EDGE.getId())
+                 .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                 .defaultSwordType(List.of(SwordType.BEWITCHED)).build(),
+                 List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 5),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.BANE_OF_ARTHROPODS), 5),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 2))));
 	}
     
     private static ResourceLocation getEnchantmentID(Enchantment enchantment) {
@@ -619,6 +685,12 @@ public class TLSSlashBladeRegistry {
     private static ResourceKey<SlashBladeDefinition> register(String id) {
         ResourceKey<SlashBladeDefinition> loc = ResourceKey.create(SlashBladeDefinition.REGISTRY_KEY,
                 TheLastSmith.prefix(id));
+        return loc;
+    }
+    
+    private static ResourceKey<SlashBladeDefinition> registerSJAP(String id) {
+        ResourceKey<SlashBladeDefinition> loc = ResourceKey.create(SlashBladeDefinition.REGISTRY_KEY,
+                new ResourceLocation("slashblade_addon", id));
         return loc;
     }
 }
