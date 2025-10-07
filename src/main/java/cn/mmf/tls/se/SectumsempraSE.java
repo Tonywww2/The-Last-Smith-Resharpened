@@ -36,16 +36,17 @@ public class SectumsempraSE extends SpecialEffect {
             ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
             stack.getCapability(CapabilitySlashBlade.BLADESTATE).ifPresent((state) -> {
                 Entity target = event.getTarget();
-                doSectumsempra(state, player, target);
-                summonedSword.setDamage(summonedSword.getDamage() + 1.0f);
-                if (target instanceof LivingEntity living) {
-                    float extraDamage1 = living.getHealth() * 0.04f + 1f;
-                    living.invulnerableTime = 0;
-                    living.hurt(player.damageSources().indirectMagic(summonedSword, player), extraDamage1);
+                if (doSectumsempra(state, player, target)) {
+                    summonedSword.setDamage(summonedSword.getDamage() + 1.0f);
+                    if (target instanceof LivingEntity living) {
+                        float extraDamage1 = living.getHealth() * 0.04f + 1f;
+                        living.invulnerableTime = 0;
+                        living.hurt(player.damageSources().indirectMagic(summonedSword, player), extraDamage1);
 
-                    float extraDamage2 = 1f;
-                    living.invulnerableTime = 0;
-                    living.hurt(player.damageSources().indirectMagic(summonedSword, player), extraDamage2);
+                        float extraDamage2 = 1f;
+                        living.invulnerableTime = 0;
+                        living.hurt(player.damageSources().indirectMagic(summonedSword, player), extraDamage2);
+                    }
                 }
 
             });
@@ -53,10 +54,10 @@ public class SectumsempraSE extends SpecialEffect {
         }
     }
 
-    private static void doSectumsempra(ISlashBladeState state, ServerPlayer player, Entity target) {
-        if (!state.hasSpecialEffect(TLSSpecialEffectRegistry.SECTUMSEMPRA_SE.getId())) return;
+    private static boolean doSectumsempra(ISlashBladeState state, ServerPlayer player, Entity target) {
+        if (!state.hasSpecialEffect(TLSSpecialEffectRegistry.SECTUMSEMPRA_SE.getId())) return false;
         int level = player.experienceLevel;
-        if (!SpecialEffect.isEffective(TLSSpecialEffectRegistry.SECTUMSEMPRA_SE.get(), level)) return;
+        if (!SpecialEffect.isEffective(TLSSpecialEffectRegistry.SECTUMSEMPRA_SE.get(), level)) return false;
 
         ServerLevel serverLevel = player.serverLevel();
         Vec3 startPos = player.position();
@@ -64,6 +65,8 @@ public class SectumsempraSE extends SpecialEffect {
 
         drawParticleCurve(serverLevel, startPos, endPos, PARTICLE_WHITE, 96);
         drawParticleCurve(serverLevel, startPos, endPos, PARTICLE_GREY, 64);
+
+        return true;
 
     }
 
